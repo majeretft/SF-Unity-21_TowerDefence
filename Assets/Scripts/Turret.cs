@@ -43,6 +43,9 @@ namespace SpaceShooter
             if (_multishotRestAmount <= 0)
                 DisableAutomaticLaunch();
 
+            if (_mode == TurretModeEnum.Auto && _fireTimer <= 0)
+                Fire();
+
             if (_isAutomaticLaunch && _multishotFireTimer <= 0)
             {
                 if (_properties.IsHoming)
@@ -75,11 +78,14 @@ namespace SpaceShooter
             if (!_properties || !CanFire)
                 return;
 
-            if (_mode == TurretModeEnum.Primary && _ship.DrawEnergy(_properties.EnergyCost) == false)
-                return;
+            if (_ship)
+            {
+                if (_mode == TurretModeEnum.Primary && _ship.DrawEnergy(_properties.EnergyCost) == false)
+                    return;
 
-            if (_mode == TurretModeEnum.Secondary && _ship.DrawAmmo(_properties.AmmoCost) == false)
-                return;
+                if (_mode == TurretModeEnum.Secondary && _ship.DrawAmmo(_properties.AmmoCost) == false)
+                    return;
+            }
 
             if (_properties.MultishotAmount > 1)
                 EnableAutomaticLaunch();
@@ -98,6 +104,7 @@ namespace SpaceShooter
 
             _fireTimer = 0;
             _properties = props;
+            _mode = props.Mode;
         }
         #endregion
 

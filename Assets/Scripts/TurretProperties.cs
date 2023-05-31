@@ -6,6 +6,7 @@ namespace SpaceShooter
     {
         Primary,
         Secondary,
+        Auto,
     }
 
     [CreateAssetMenu(menuName = "Space Shooter / Turret")]
