@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using TowerDefence;
 
 namespace SpaceShooter
 {
@@ -15,7 +16,7 @@ namespace SpaceShooter
         private Entity[] _entityPrefab;
 
         [SerializeField]
-        private AIPointPatrol _patrolPointTarget;
+        private Path _path;
 
         [SerializeField]
         private CircleArea _spawnArea;
@@ -62,12 +63,12 @@ namespace SpaceShooter
 
                 instance.transform.position = _spawnArea.GetRandomPointInsideArea();
 
-                if (instance.TryGetComponent<AiController>(out var ai))
+                if (instance.TryGetComponent<TDPatrolController>(out var ai))
                 {
                     var values = Enum.GetValues(typeof(AiBehaviourEnum));
                     // ai.Behaviour = (AiBehaviourEnum)values.GetValue(UnityEngine.Random.Range(1, values.Length));
                     ai.Behaviour = AiBehaviourEnum.Patrol;
-                    ai.PatrolPoint = _patrolPointTarget;
+                    ai.SetPath(_path);
                     var d = instance.GetComponent<Distructible>();
                     d.TeamId = 3;
                 }

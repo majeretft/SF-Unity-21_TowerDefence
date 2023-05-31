@@ -138,13 +138,10 @@ namespace SpaceShooter
             _randomizeTargetPositionTimer.Restart();
 
             if (_behaviour == AiBehaviourEnum.Patrol)
-            {
-                var newPoint = Random.onUnitSphere * _patrolPoint.Radius + _patrolPoint.transform.position;
-                _moveTarget = newPoint;
-            }
+                AssignNewPatrolPoint();
+
             if (_behaviour == AiBehaviourEnum.PatrolPointToPoint)
             {
-
                 var capacity = 2;
                 if (_patrolPoints == null || _patrolPoints.Capacity != capacity)
                 {
@@ -188,29 +185,13 @@ namespace SpaceShooter
                 var currentPatrolTarget = dirUnit * _patrolPoint.Radius * _patrolWidthCoef + _patrolPoint.transform.position;
                 _moveTarget = currentPatrolTarget;
                 _patrolPointCurrentNumber++;
-
-
-                // var capacity = Mathf.FloorToInt(_patrolPoint.Radius / Mathf.PI * 6);
-                // if (_patrolPoints == null || _patrolPoints.Capacity != capacity)
-                // {
-                //     _patrolPoints = new List<Vector3>(capacity);
-
-
-                // }
-
-                // for (int i = 0; i < _patrolPoints.Count; i++)
-                // {
-                //     if (_moveTarget == _patrolPoints[i])
-                //     {
-                //         if (i == _patrolPoints.Count - 1)
-                //             _moveTarget = _patrolPoints[0];
-                //         else
-                //             _moveTarget = _patrolPoints[i + 1];
-
-                //         break;
-                //     }
-                // }
             }
+        }
+
+        protected virtual void AssignNewPatrolPoint()
+        {
+            var newPoint = Random.onUnitSphere * _patrolPoint.Radius + _patrolPoint.transform.position;
+            _moveTarget = newPoint;
         }
 
         private void ActionOperateShip()
@@ -309,7 +290,7 @@ namespace SpaceShooter
             _findNewFireTargetTimer.Tick(Time.deltaTime);
         }
 
-        private void SetPatrolBehaviour(AIPointPatrol patrolPoint)
+        protected void SetPatrolBehaviour(AIPointPatrol patrolPoint)
         {
             _behaviour = AiBehaviourEnum.Patrol;
             _patrolPoint = patrolPoint;

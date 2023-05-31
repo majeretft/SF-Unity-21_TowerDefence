@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 3883714966884662833}
   - component: {fileID: 3883714966884662832}
   - component: {fileID: 3883714966884662839}
+  - component: {fileID: 4012294145167554629}
   m_Layer: 0
   m_Name: View
   m_TagString: Untagged
@@ -154,6 +155,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4012294145167554629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3883714966884662834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f48e3045f4f6f144ba33372989e2c52b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3883714968015773198
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,7 +178,7 @@ GameObject:
   - component: {fileID: 3883714968015773197}
   - component: {fileID: 5048940026860185899}
   - component: {fileID: 8235558437415208187}
-  - component: {fileID: -7397636397305838630}
+  - component: {fileID: 7671152039797298519}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -233,13 +246,13 @@ MonoBehaviour:
   _teamId: 0
   _scoreValue: 0
   _mass: 1
-  _thrust: 10
-  _torque: 100
-  _speedLinearMax: 1000
-  _speedAngularMax: 1000
+  _thrust: 1000
+  _torque: 1000
+  _speedLinearMax: 1
+  _speedAngularMax: 300
   _turrets: []
   _shipImage: {fileID: 0}
---- !u!114 &-7397636397305838630
+--- !u!114 &7671152039797298519
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -248,7 +261,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3883714968015773198}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1820c86fa4e2e4c4c81dcba2b08a6a0b, type: 3}
+  m_Script: {fileID: 11500000, guid: ba8ed966146187a4ea7407499d4f657a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _behaviour: 1
