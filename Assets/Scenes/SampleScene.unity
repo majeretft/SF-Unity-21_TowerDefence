@@ -971,6 +971,8 @@ MonoBehaviour:
   _enemyPrefab: {fileID: 7569423126015063413, guid: fa0d60cdeddfd5742b8e49fa8fddd8a5, type: 3}
   _enemyProps:
   - {fileID: 11400000, guid: a06193082bc3967409d1315ba034412b, type: 2}
+  - {fileID: 11400000, guid: e8926e35b6fa479448d13be67c102c4d, type: 2}
+  - {fileID: 11400000, guid: 1731394307b55a44980519e9cb2a43b5, type: 2}
   _path: {fileID: 1228223886}
 --- !u!114 &981121516
 MonoBehaviour:
@@ -991,6 +993,7 @@ MonoBehaviour:
   _enemyPrefab: {fileID: 7569423126015063413, guid: fa0d60cdeddfd5742b8e49fa8fddd8a5, type: 3}
   _enemyProps:
   - {fileID: 11400000, guid: e387e86d15b0e014f9e76e634960927c, type: 2}
+  - {fileID: 11400000, guid: 9e02399c857d7574782fa5ac863c7d97, type: 2}
   _path: {fileID: 200121601}
 --- !u!1 &1077883746
 GameObject:

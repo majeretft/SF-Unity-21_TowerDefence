@@ -21,9 +21,26 @@ namespace TowerDefence
 
             var anim = view.GetComponent<Animator>();
             anim.runtimeAnimatorController = props.animation;
+            if (TryGetFirstSpriteFromAnimation(props.animation, out var s))
+                sr.sprite = s;
 
             GetComponent<Spaceship>().UseProps(props);
             GetComponentInChildren<CircleCollider2D>().radius = props.radius;
+        }
+
+        private bool TryGetFirstSpriteFromAnimation(RuntimeAnimatorController ac, out Sprite sprite)
+        {
+            sprite = null;
+
+            if (!ac.animationClips[0])
+                return false;
+
+            var clip = ac.animationClips[0];
+            var binding = AnimationUtility.GetObjectReferenceCurveBindings(clip)[0];
+            var keyframes = AnimationUtility.GetObjectReferenceCurve(clip, binding);
+            sprite = (Sprite)keyframes[0].value;
+
+            return true;
         }
     }
 
@@ -36,7 +53,8 @@ namespace TowerDefence
             base.OnInspectorGUI();
             var props = EditorGUILayout.ObjectField(null, typeof(EnemyProperties), false) as EnemyProperties;
 
-            if (props) {
+            if (props)
+            {
                 (target as Enemy).UseProps(props);
             }
         }
