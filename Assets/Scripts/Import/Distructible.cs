@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TowerDefence;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -97,7 +98,6 @@ namespace SpaceShooter
                     Explode();
                 else
                     HandleDistruction();
-
             }
         }
 
@@ -141,5 +141,11 @@ namespace SpaceShooter
         public int ScoreValue => _scoreValue;
 
         #endregion
+
+        public void UseProps(EnemyProperties props)
+        {
+            _initialHitPoints = props.hp;
+            _scoreValue = props.score;
+        }
     }
 }

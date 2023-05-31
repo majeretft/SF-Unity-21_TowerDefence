@@ -107,7 +107,8 @@ namespace SpaceShooter
         {
             ActionFindNewMoveTarget();
             ActionOperateShip();
-            ActionFindNewAttackTarget(_patrolPoint.SearchAttackTargetRadius, _patrolPoint.transform.position);
+            if (_patrolPoint)
+                ActionFindNewAttackTarget(_patrolPoint.SearchAttackTargetRadius, _patrolPoint.transform.position);
             ActionFire();
             ActionEvadeCollision();
         }

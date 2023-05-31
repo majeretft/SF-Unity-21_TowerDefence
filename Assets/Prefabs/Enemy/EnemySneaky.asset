@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdef89d14075aec43a03c86e9bdb00ea, type: 3}
+  m_Name: EnemySneaky
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0.87282395, b: 1, a: 1}
+  spriteScale: {x: 2.5, y: 2.5}
+  animation: {fileID: 9100000, guid: e470ec74a2ff6b74396e22cb9f852bc3, type: 2}
+  moveSpeed: 2
+  hp: 2
+  score: 2

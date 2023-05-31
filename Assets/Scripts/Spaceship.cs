@@ -1,4 +1,6 @@
+using System;
 using System.Linq;
+using TowerDefence;
 using UnityEngine;
 
 namespace SpaceShooter
@@ -235,6 +237,12 @@ namespace SpaceShooter
             _turrets
                 .ToList()
                 .ForEach(x => x.AssingProperties(props));
+        }
+
+        public new void UseProps(EnemyProperties props)
+        {
+            base.UseProps(props);
+            _speedLinearMax = props.moveSpeed;
         }
     }
 }
