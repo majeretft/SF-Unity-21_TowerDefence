@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace SpaceShooter
@@ -35,7 +36,8 @@ namespace SpaceShooter
 
         private void RegisterEvent()
         {
-            _ship.OnDeathEvent.AddListener(OnDeath);
+            if (_ship)
+                _ship.OnDeathEvent.AddListener(OnDeath);
         }
 
         private void OnDeath()
@@ -79,6 +81,14 @@ namespace SpaceShooter
         public void AddKillScore()
         {
             KillScore++;
+        }
+
+        public void TakeDamage(int damage)
+        {
+            _lifeCount -= damage;
+
+            if (_lifeCount <= 0)
+                LevelSequenceController.Instance.FinishCurrentLevel(false);
         }
 
         #endregion

@@ -16,5 +16,7 @@ namespace TowerDefence
         public int score = 1;
         [Range(0.1f, 10f)]
         public float radius = 0.2f;
+        public int damage = 1;
+        public int gold = 1;
     }
 }

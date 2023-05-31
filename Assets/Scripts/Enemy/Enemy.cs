@@ -11,8 +11,17 @@ namespace TowerDefence
     [RequireComponent(typeof(TDPatrolController))]
     public class Enemy : MonoBehaviour
     {
+        [SerializeField]
+        private int _damage = 1;
+
+        [SerializeField]
+        private int _gold = 1;
+
         public void UseProps(EnemyProperties props)
         {
+            _damage = props.damage;
+            _gold = props.gold;
+
             var view = transform.Find("View");
 
             var sr = view.GetComponent<SpriteRenderer>();
@@ -26,6 +35,16 @@ namespace TowerDefence
 
             GetComponent<Spaceship>().UseProps(props);
             GetComponentInChildren<CircleCollider2D>().radius = props.radius;
+        }
+
+        public void DamagePlayer()
+        {
+            Player.Instance.TakeDamage(_damage);
+        }
+
+        public void GivePlayerGold()
+        {
+            (Player.Instance as TDPlayer).ChangeCold(_gold);
         }
 
         private bool TryGetFirstSpriteFromAnimation(RuntimeAnimatorController ac, out Sprite sprite)
