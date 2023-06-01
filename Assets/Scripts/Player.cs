@@ -7,6 +7,7 @@ namespace SpaceShooter
     {
         [SerializeField]
         private int _lifeCount;
+        public int LifeCount => _lifeCount;
 
         [SerializeField]
         private Spaceship _ship;
@@ -83,7 +84,7 @@ namespace SpaceShooter
             KillScore++;
         }
 
-        public void TakeDamage(int damage)
+        protected void TakeDamage(int damage)
         {
             _lifeCount -= damage;
 

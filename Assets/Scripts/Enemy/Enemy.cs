@@ -39,12 +39,12 @@ namespace TowerDefence
 
         public void DamagePlayer()
         {
-            Player.Instance.TakeDamage(_damage);
+            TDPlayer.Instance.ReduceHp(_damage);
         }
 
         public void GivePlayerGold()
         {
-            (Player.Instance as TDPlayer).ChangeCold(_gold);
+            TDPlayer.Instance.ChangeCold(_gold);
         }
 
         private bool TryGetFirstSpriteFromAnimation(RuntimeAnimatorController ac, out Sprite sprite)
