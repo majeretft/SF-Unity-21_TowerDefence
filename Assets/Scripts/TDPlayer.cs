@@ -11,8 +11,23 @@ namespace TowerDefence
         [SerializeField]
         private int _gold = 0;
 
-        public static event Action<int> OnGoldUpdate;
-        public static event Action<int> OnHpUpdate;
+        [SerializeField]
+        private Tower _towerPrefab;
+
+        private static event Action<int> OnGoldUpdate;
+        private static event Action<int> OnHpUpdate;
+
+        public static void SubscribeGoldUpdate(Action<int> handler)
+        {
+            OnGoldUpdate += handler;
+            OnGoldUpdate(Instance ? Instance._gold : 0);
+        }
+
+        public static void SubscribeHpUpdate(Action<int> handler)
+        {
+            OnHpUpdate += handler;
+            OnHpUpdate(Instance ? Instance.LifeCount : 0);
+        }
 
         private void Start()
         {
@@ -30,6 +45,18 @@ namespace TowerDefence
         {
             TakeDamage(value);
             OnHpUpdate(LifeCount);
+        }
+
+        public void TryBuild(TowerProperties props, Transform buildSite)
+        {
+            if (_gold < props.goldCost)
+                return;
+
+            ChangeCold(-props.goldCost);
+
+            var tower = Instantiate<Tower>(_towerPrefab, buildSite.position, Quaternion.identity);
+            tower.GetComponentInChildren<SpriteRenderer>().sprite = props.sprite;
+            Destroy(buildSite.gameObject);
         }
     }
 }

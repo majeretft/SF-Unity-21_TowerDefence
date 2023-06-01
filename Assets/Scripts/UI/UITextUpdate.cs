@@ -20,10 +20,10 @@ namespace TowerDefence
             _text = GetComponent<TextMeshProUGUI>();
 
             if (source == UpdateSource.Gold)
-                TDPlayer.OnGoldUpdate += UpdateText;
+                TDPlayer.SubscribeGoldUpdate(UpdateText);
 
             if (source == UpdateSource.HP)
-                TDPlayer.OnHpUpdate += UpdateText;
+                TDPlayer.SubscribeHpUpdate(UpdateText);
         }
 
         private void UpdateText(int value)
