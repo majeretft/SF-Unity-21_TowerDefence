@@ -17,12 +17,10 @@ namespace TowerDefence
 
         [SerializeField]
         private Transform _buildSite;
-        public Transform BuildSite
+
+        public void SetBuildSite(Transform position)
         {
-            set
-            {
-                _buildSite = value;
-            }
+            _buildSite = position;
         }
 
         private void Awake()
@@ -48,6 +46,7 @@ namespace TowerDefence
         public void Buy()
         {
             TDPlayer.Instance.TryBuild(_props, _buildSite);
+            BuildSite.HideControls();
         }
     }
 }

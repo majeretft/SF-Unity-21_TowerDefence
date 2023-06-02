@@ -89,7 +89,8 @@ namespace SpaceShooter
             _lifeCount -= damage;
 
             if (_lifeCount <= 0)
-                LevelSequenceController.Instance.FinishCurrentLevel(false);
+                //LevelSequenceController.Instance.FinishCurrentLevel(false);
+                LevelSequenceController.Instance.RestartLevel();
         }
 
         #endregion
