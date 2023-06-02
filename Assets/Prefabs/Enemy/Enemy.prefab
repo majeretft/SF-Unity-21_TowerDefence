@@ -47,7 +47,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.2
+  m_Radius: 0.3
 --- !u!1 &3883714966884662834
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,7 +123,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0966982b9c8e06b4ba6750ef9b9489eb, type: 3}
+  m_Sprite: {fileID: -1032951385, guid: 2c0ebaf3c8edd444081b40273572dd3b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -144,7 +144,7 @@ Animator:
   m_GameObject: {fileID: 3883714966884662834}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e470ec74a2ff6b74396e22cb9f852bc3, type: 2}
+  m_Controller: {fileID: 9100000, guid: 78b18cccf773f0c408fc688c283e5424, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -240,7 +240,7 @@ MonoBehaviour:
   _interactiveName: 
   _isInvincible: 0
   _isExplodible: 0
-  _initialHitPoints: 5
+  _initialHitPoints: 3
   _onDeathEvent:
     m_PersistentCalls:
       m_Calls:
@@ -257,11 +257,11 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _teamId: 0
-  _scoreValue: 0
+  _scoreValue: 6
   _mass: 1
   _thrust: 1000
   _torque: 1000
-  _speedLinearMax: 1
+  _speedLinearMax: 1.6
   _speedAngularMax: 300
   _turrets: []
   _shipImage: {fileID: 0}
@@ -315,4 +315,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 1
-  _gold: 1
+  _gold: 2

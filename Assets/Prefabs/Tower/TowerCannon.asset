@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b523af0d06a4f843a81177b66c67534, type: 3}
   m_Name: TowerCannon
   m_EditorClassIdentifier: 
-  goldCost: 15
+  goldCost: 20
   spriteGui: {fileID: 21300000, guid: 4ea84224d203dbb428e898c81bb94aac, type: 3}
-  sprite: {fileID: 21300000, guid: 961542bf834d173448be6e9b235a3b66, type: 3}
+  sprite: {fileID: 21300000, guid: 298636722737c4b41816506cd4bc994f, type: 3}
+  radius: 3
+  turretProps: {fileID: 11400000, guid: 48689ef4af1d9454aa472a7c942caea9, type: 2}

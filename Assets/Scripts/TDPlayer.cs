@@ -55,7 +55,7 @@ namespace TowerDefence
             ChangeCold(-props.goldCost);
 
             var tower = Instantiate<Tower>(_towerPrefab, buildSite.position, Quaternion.identity);
-            tower.GetComponentInChildren<SpriteRenderer>().sprite = props.sprite;
+            tower.UseProps(props);
             Destroy(buildSite.gameObject);
         }
     }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace SpaceShooter
@@ -148,6 +149,12 @@ namespace SpaceShooter
             _multishotRestAmount = 0;
             _isAutomaticLaunch = false;
             _radarTargets = null;
+        }
+
+        public void UseProps(TurretProperties turretProps)
+        {
+            _properties = turretProps;
+            _fireTimer = _properties.FireRate;
         }
         #endregion
     }

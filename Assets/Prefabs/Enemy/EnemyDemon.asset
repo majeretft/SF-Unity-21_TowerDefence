@@ -15,9 +15,9 @@ MonoBehaviour:
   color: {r: 1, g: 1, b: 1, a: 1}
   spriteScale: {x: 3.5, y: 3.5}
   animation: {fileID: 9100000, guid: db021784b13c21249a74b3b219316652, type: 2}
-  moveSpeed: 3
-  hp: 4
-  score: 6
+  moveSpeed: 2
+  hp: 1
+  score: 3
   radius: 0.3
   damage: 1
-  gold: 3
+  gold: 2

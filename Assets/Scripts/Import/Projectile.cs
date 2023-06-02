@@ -56,11 +56,19 @@ namespace SpaceShooter
         private void OnProjectileLifeEnd(Collider2D collider, Vector2 position)
         {
             Destroy(gameObject);
+
+            if (_impactEffectPrefab)
+                SpawnImpactEffect(position);
         }
 
         public void SetParentShooter(Distructible parent)
         {
             _parent = parent;
+        }
+
+        private void SpawnImpactEffect(Vector3 position)
+        {
+            Instantiate(_impactEffectPrefab, position, Quaternion.identity);
         }
     }
 }

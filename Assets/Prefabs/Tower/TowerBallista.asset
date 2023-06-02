@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b523af0d06a4f843a81177b66c67534, type: 3}
-  m_Name: TowerArcher
+  m_Name: TowerBallista
   m_EditorClassIdentifier: 
-  goldCost: 4
-  spriteGui: {fileID: 21300000, guid: 06b3b764465972e4c85071e9bac4296c, type: 3}
-  sprite: {fileID: 21300000, guid: 0d1dc428e29b59d4da665429794be749, type: 3}
-  radius: 3.5
-  turretProps: {fileID: 11400000, guid: 0b152f56289f46a4693e3bb8ae1b0ff4, type: 2}
+  goldCost: 15
+  spriteGui: {fileID: 21300000, guid: ef25b92a8e4b2644b8420de820e6c11f, type: 3}
+  sprite: {fileID: 21300000, guid: 961542bf834d173448be6e9b235a3b66, type: 3}
+  radius: 5
+  turretProps: {fileID: 11400000, guid: dd6ed3c74bc92d741ace7fb5f139b5b0, type: 2}

@@ -1,5 +1,5 @@
-using UnityEngine;
 using SpaceShooter;
+using UnityEngine;
 
 namespace TowerDefence
 {
@@ -23,11 +23,15 @@ namespace TowerDefence
         [SerializeField]
         private float _spawnTimeInterval;
 
+        [SerializeField]
+        private bool _spawnAtStart = false;
+
         private float _timer;
 
         private void Start()
         {
-            SpawnEntities();
+            if (_spawnAtStart)
+                SpawnEntities();
 
             _timer = _spawnTimeInterval;
         }

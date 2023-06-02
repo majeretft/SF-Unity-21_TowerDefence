@@ -1,6 +1,10 @@
 using SpaceShooter;
 using UnityEngine;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 namespace TowerDefence
 {
     public class Tower : MonoBehaviour
@@ -12,9 +16,20 @@ namespace TowerDefence
 
         private Distructible _target;
 
-        private void Start()
+        private void Awake()
         {
             _turrets = GetComponentsInChildren<Turret>();
+        }
+
+        public void UseProps(TowerProperties props)
+        {
+            _radius = props.radius;
+            GetComponentInChildren<SpriteRenderer>().sprite = props.sprite;
+
+            foreach (var turret in _turrets)
+            {
+                turret.UseProps(props.turretProps);
+            }
         }
 
         private void Update()
@@ -49,4 +64,21 @@ namespace TowerDefence
             Gizmos.DrawWireSphere(transform.position, _radius);
         }
     }
+
+#if UNITY_EDITOR
+    [CustomEditor(typeof(Tower))]
+    public class TowerInspector : Editor
+    {
+        public override void OnInspectorGUI()
+        {
+            base.OnInspectorGUI();
+            var props = EditorGUILayout.ObjectField(null, typeof(TowerProperties), false) as TowerProperties;
+
+            if (props)
+            {
+                (target as Tower).UseProps(props);
+            }
+        }
+    }
+#endif
 }
