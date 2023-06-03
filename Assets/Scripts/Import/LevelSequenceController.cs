@@ -45,10 +45,10 @@ namespace SpaceShooter
         public void FinishCurrentLevel(bool success)
         {
             IsLevelSuccess = success;
-            CalculateLevelStats();
-            GameStats.Add(LevelStats.Clone());
+            // CalculateLevelStats();
+            // GameStats.Add(LevelStats.Clone());
 
-            ResultPanelController.Instance.ShowResults(LevelStats, IsLevelSuccess);
+            ResultPanelController.Instance.ShowResults(IsLevelSuccess);
         }
 
         public void StartNextLevel()

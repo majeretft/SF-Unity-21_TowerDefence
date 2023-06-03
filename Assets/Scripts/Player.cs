@@ -9,6 +9,8 @@ namespace SpaceShooter
         private int _lifeCount;
         public int LifeCount => _lifeCount;
 
+        public event Action OnPlayerDead;
+
         [SerializeField]
         private Spaceship _ship;
         public Spaceship PlayerShip => _ship;
@@ -88,9 +90,10 @@ namespace SpaceShooter
         {
             _lifeCount -= damage;
 
-            if (_lifeCount <= 0)
-                //LevelSequenceController.Instance.FinishCurrentLevel(false);
-                LevelSequenceController.Instance.RestartLevel();
+            if (_lifeCount <= 0) {
+                _lifeCount = 0;
+                OnPlayerDead?.Invoke();
+            }
         }
 
         #endregion

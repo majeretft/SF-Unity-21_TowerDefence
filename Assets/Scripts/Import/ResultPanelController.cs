@@ -23,39 +23,44 @@ namespace SpaceShooter
         [SerializeField]
         private TextMeshProUGUI _buttonNextText;
 
+        [SerializeField]
+        private GameObject _panelSuccess;
+
+        [SerializeField]
+        private GameObject _panelFailure;
+
         private bool _isSuccess;
 
         private void Start()
         {
-            gameObject.SetActive(false);
+            // gameObject.SetActive(false);
         }
 
-        public void ShowResults(PlayerStatistics levelResults, bool isSuccess)
+        public void ShowResults(bool isSuccess)
         {
-            gameObject.SetActive(true);
+            // _isSuccess = isSuccess;
+            // _result.text = _isSuccess ? "Win" : "Loose";
+            // _buttonNextText.text = _isSuccess ? "Next" : "Restart";
 
-            _isSuccess = isSuccess;
-            _result.text = _isSuccess ? "Win" : "Loose";
-            _buttonNextText.text = _isSuccess ? "Next" : "Restart";
+            // _kills.text = $"Kills: {levelResults.Kills}";
+            // _score.text = $"Score: {levelResults.Score}";
+            // _time.text = $"Time: {levelResults.Time} / Ref time: {levelResults.TimeRef}";
+            // _timeRecord.text = levelResults.IsTimeRecord ? "Double Score for time achivement!" : string.Empty;
 
-            _kills.text = $"Kills: {levelResults.Kills}";
-            _score.text = $"Score: {levelResults.Score}";
-            _time.text = $"Time: {levelResults.Time} / Ref time: {levelResults.TimeRef}";
-            _timeRecord.text = levelResults.IsTimeRecord ? "Double Score for time achivement!" : string.Empty;
+            _panelSuccess.SetActive(isSuccess);
+            _panelFailure.SetActive(!isSuccess);
 
-            Time.timeScale = 0;
+            // Time.timeScale = 0;
         }
 
         public void OnButtonNextClick()
         {
-            gameObject.SetActive(false);
+            LevelSequenceController.Instance.StartNextLevel();
+        }
 
-            Time.timeScale = 1;
-
-            if (_isSuccess)
-                LevelSequenceController.Instance.StartNextLevel();
-            else
-                LevelSequenceController.Instance.RestartLevel();
+        public void OnButtonRestartClick()
+        {
+            LevelSequenceController.Instance.RestartLevel();
         }
     }
 }
