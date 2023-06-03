@@ -30,5 +30,14 @@ namespace TowerDefence
         {
             _text.text = value.ToString();
         }
+
+        private void OnDestroy()
+        {
+            if (source == UpdateSource.Gold)
+                TDPlayer.UnSubscribeGoldUpdate(UpdateText);
+
+            if (source == UpdateSource.HP)
+                TDPlayer.UnSubscribeHpUpdate(UpdateText);
+        }
     }
 }

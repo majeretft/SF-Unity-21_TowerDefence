@@ -29,6 +29,16 @@ namespace TowerDefence
             OnHpUpdate(Instance ? Instance.LifeCount : 0);
         }
 
+        public static void UnSubscribeGoldUpdate(Action<int> handler)
+        {
+            OnGoldUpdate -= handler;
+        }
+
+        public static void UnSubscribeHpUpdate(Action<int> handler)
+        {
+            OnHpUpdate -= handler;
+        }
+
         private void Start()
         {
             OnGoldUpdate(_gold);
