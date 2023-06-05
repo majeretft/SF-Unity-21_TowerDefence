@@ -16,12 +16,22 @@ namespace TowerDefence
         [SerializeField]
         private EpisodeScore[] _completionData;
 
-        private const string _filename = "game.json";
+        public const string FILE_NAME = "game.json";
+
+        public static void SaveEpisodeResult(int levelScore)
+        {
+            Instance.SaveResult(LevelSequenceController.Instance.CurrentEpisode, levelScore);
+        }
+
+        public static void ResetSavedData()
+        {
+            FileHandler.Reset(FILE_NAME);
+        }
 
         private new void Awake()
         {
             base.Awake();
-            Saver<EpisodeScore>.TryLoad(_filename, ref _completionData);
+            Saver<EpisodeScore>.TryLoad(FILE_NAME, ref _completionData);
         }
 
         public bool TryIndex(int id, out Episode episode, out int score)
@@ -38,11 +48,6 @@ namespace TowerDefence
             return false;
         }
 
-        public static void SaveEpisodeResult(int levelScore)
-        {
-            Instance.SaveResult(LevelSequenceController.Instance.CurrentEpisode, levelScore);
-        }
-
         private void SaveResult(Episode currentEpisode, int levelScore)
         {
             foreach (var item in _completionData)
@@ -50,7 +55,7 @@ namespace TowerDefence
                 if (item.episode == currentEpisode && levelScore > item.score)
                 {
                     item.score = levelScore;
-                    Saver<EpisodeScore>.TrySave(_filename, _completionData);
+                    Saver<EpisodeScore>.TrySave(FILE_NAME, _completionData);
                 }
             }
         }

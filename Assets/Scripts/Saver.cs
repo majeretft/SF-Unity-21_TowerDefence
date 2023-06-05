@@ -11,7 +11,7 @@ namespace TowerDefence
 
         public static void TryLoad(string filename, ref T[] data)
         {
-            var path = GetPath(filename);
+            var path = FileHandler.GetPath(filename);
 
             if (File.Exists(path))
             {
@@ -19,23 +19,39 @@ namespace TowerDefence
                 var saver = JsonUtility.FromJson<Saver<T>>(str);
                 data = saver.data;
             }
-            else
-            {
-
-            }
         }
 
         public static void TrySave(string filename, T[] data)
         {
-            var path = GetPath(filename);
+            var path = FileHandler.GetPath(filename);
             var wrapper = new Saver<T> { data = data };
             var json = JsonUtility.ToJson(wrapper);
             File.WriteAllText(path, json);
         }
+    }
 
-        private static string GetPath(string filename)
+    public static class FileHandler
+    {
+        public static string GetPath(string filename)
         {
             return $"{Application.persistentDataPath}/{filename}";
+        }
+
+        public static void Reset(string filename)
+        {
+            var path = FileHandler.GetPath(filename);
+
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
+        }
+
+        public static bool HasFile(string filename)
+        {
+            var path = FileHandler.GetPath(filename);
+
+            return File.Exists(path);
         }
     }
 }
