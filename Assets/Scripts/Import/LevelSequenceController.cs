@@ -5,7 +5,7 @@ namespace SpaceShooter
 {
     public class LevelSequenceController : SingletonBase<LevelSequenceController>
     {
-        public static string MainMenuSceneName = "Level_Map";
+        public static string LevelMapSceneName = "Level_Map";
 
         public Episode CurrentEpisode { get; private set; }
 
@@ -19,7 +19,8 @@ namespace SpaceShooter
 
         public List<PlayerStatistics> GameStats { get; private set; }
 
-        protected override void Awake() {
+        protected override void Awake()
+        {
             base.Awake();
 
             GameStats = new List<PlayerStatistics>();
@@ -42,6 +43,11 @@ namespace SpaceShooter
             SceneManager.LoadScene(0);
         }
 
+        public void LoadMapLevel()
+        {
+            SceneManager.LoadScene(LevelMapSceneName);
+        }
+
         public void FinishCurrentLevel(bool success)
         {
             IsLevelSuccess = success;
@@ -59,7 +65,7 @@ namespace SpaceShooter
 
             if (CurrentEpisode.Levels.Length <= CurrentLevel)
             {
-                SceneManager.LoadScene(MainMenuSceneName);
+                SceneManager.LoadScene(LevelMapSceneName);
             }
             else
             {

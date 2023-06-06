@@ -425,6 +425,7 @@ MonoBehaviour:
   _levelCompletedEvent:
     m_PersistentCalls:
       m_Calls: []
+  levelScore: 1
 --- !u!114 &407129115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -437,7 +438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90774962fb8c78a43ba920c3475e3a7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeLimit: 1
+  _timeLimit: 5
 --- !u!1 &482182200
 GameObject:
   m_ObjectHideFlags: 0

@@ -29,7 +29,7 @@ namespace SpaceShooter
             _conditions = GetComponents<ILevelCondition>();
         }
 
-        private void Update()
+        protected virtual void Update()
         {
             if (!_isLevelCompleted)
             {
