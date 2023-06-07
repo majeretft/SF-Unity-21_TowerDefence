@@ -15,7 +15,7 @@ namespace TowerDefence
         private Tower _towerPrefab;
 
         private static event Action<int> OnGoldUpdate;
-        private static event Action<int> OnHpUpdate;
+        public static event Action<int> OnHpUpdate;
 
         public static void SubscribeGoldUpdate(Action<int> handler)
         {

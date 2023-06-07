@@ -11,8 +11,8 @@ namespace SpaceShooter
     public class LevelController : SingletonBase<LevelController>
     {
         [SerializeField]
-        private int _referenceTime;
-        public int ReferenceTime => _referenceTime;
+        protected float _referenceTime;
+        public float ReferenceTime => _referenceTime;
 
         [SerializeField]
         protected UnityEvent _levelCompletedEvent;

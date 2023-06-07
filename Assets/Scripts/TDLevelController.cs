@@ -5,11 +5,13 @@ namespace TowerDefence
 {
     public class TDLevelController : LevelController
     {
-        public int levelScore = 1;
+        private int _levelScore = 3;
 
         private new void Start()
         {
             base.Start();
+
+            _referenceTime += Time.time;
 
             TDPlayer.Instance.OnPlayerDead += () =>
             {
@@ -20,19 +22,32 @@ namespace TowerDefence
             _levelCompletedEvent.AddListener(() =>
             {
                 StopLevelActivity();
-                UIMapCompletion.SaveEpisodeResult(levelScore);
+
+                if (_referenceTime <= Time.time)
+                    _levelScore--;
+
+                UIMapCompletion.SaveEpisodeResult(_levelScore);
             });
 
-
-            PausePanel.Instance.OnBackButtonClick.AddListener(() => {
+            PausePanel.Instance.OnBackButtonClick.AddListener(() =>
+            {
                 PausePanel.Instance.Hide();
                 LevelSequenceController.Instance.LoadMapLevel();
             });
 
-            PausePanel.Instance.OnContinueButtonClick.AddListener(() => {
+            PausePanel.Instance.OnContinueButtonClick.AddListener(() =>
+            {
                 PausePanel.Instance.Hide();
                 ResumeLevelActivity();
             });
+
+            void LifeScoreChange(int _)
+            {
+                _levelScore--;
+                TDPlayer.OnHpUpdate -= LifeScoreChange;
+            }
+
+            TDPlayer.OnHpUpdate += LifeScoreChange;
         }
 
         private void StopLevelActivity()

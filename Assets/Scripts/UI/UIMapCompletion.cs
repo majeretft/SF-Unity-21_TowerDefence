@@ -20,7 +20,10 @@ namespace TowerDefence
 
         public static void SaveEpisodeResult(int levelScore)
         {
-            Instance.SaveResult(LevelSequenceController.Instance.CurrentEpisode, levelScore);
+            if (Instance)
+                Instance.SaveResult(LevelSequenceController.Instance.CurrentEpisode, levelScore);
+            else
+                Debug.Log($"Level completed with score: {levelScore}");
         }
 
         public static void ResetSavedData()

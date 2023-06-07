@@ -473,7 +473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90774962fb8c78a43ba920c3475e3a7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeLimit: 30
+  _timeLimit: 15
 --- !u!114 &407129114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -487,11 +487,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _doDonDestroyOnLoad: 0
-  _referenceTime: 0
+  _referenceTime: 2
   _levelCompletedEvent:
     m_PersistentCalls:
       m_Calls: []
-  levelScore: 1
 --- !u!1 &482182200
 GameObject:
   m_ObjectHideFlags: 0
@@ -1873,6 +1872,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1659687718431304867, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6164876478373435939, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1960,6 +1963,14 @@ PrefabInstance:
     - target: {fileID: 6164876478373435943, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
       propertyPath: m_Name
       value: HUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 6164876479065366790, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6164876480087874618, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
