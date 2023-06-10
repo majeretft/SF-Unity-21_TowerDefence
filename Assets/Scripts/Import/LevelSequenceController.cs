@@ -6,6 +6,7 @@ namespace SpaceShooter
     public class LevelSequenceController : SingletonBase<LevelSequenceController>
     {
         public static string LevelMapSceneName = "Level_Map";
+        public static string MainMenuSceneName = "MainMenu";
 
         public Episode CurrentEpisode { get; private set; }
 
@@ -39,13 +40,18 @@ namespace SpaceShooter
 
         public void RestartLevel()
         {
-            // SceneManager.LoadScene(CurrentEpisode.Levels[CurrentLevel]);
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(CurrentEpisode.Levels[CurrentLevel]);
+            // SceneManager.LoadScene(0);
         }
 
         public void LoadMapLevel()
         {
             SceneManager.LoadScene(LevelMapSceneName);
+        }
+
+        public void LoadMainMenu()
+        {
+            SceneManager.LoadScene(MainMenuSceneName);
         }
 
         public void FinishCurrentLevel(bool success)

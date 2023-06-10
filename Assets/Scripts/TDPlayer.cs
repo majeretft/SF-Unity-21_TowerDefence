@@ -14,6 +14,9 @@ namespace TowerDefence
         [SerializeField]
         private Tower _towerPrefab;
 
+        [SerializeField]
+        private UpdateProperties _hpUpdate;
+
         private static event Action<int> OnGoldUpdate;
         public static event Action<int> OnHpUpdate;
 
@@ -37,6 +40,14 @@ namespace TowerDefence
         public static void UnSubscribeHpUpdate(Action<int> handler)
         {
             OnHpUpdate -= handler;
+        }
+
+        protected override void Awake()
+        {
+            base.Awake();
+
+            var level = Updates.GetLevel(_hpUpdate);
+            AddHp(LifeCount * level);
         }
 
         private void Start()

@@ -96,6 +96,16 @@ namespace SpaceShooter
             }
         }
 
+        protected void AddHp(int hp)
+        {
+            _lifeCount += hp;
+
+            if (_lifeCount <= 0) {
+                _lifeCount = 0;
+                OnPlayerDead?.Invoke();
+            }
+        }
+
         #endregion
     }
 }

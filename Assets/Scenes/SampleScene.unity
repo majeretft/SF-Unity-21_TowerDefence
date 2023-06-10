@@ -714,11 +714,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _doDonDestroyOnLoad: 0
-  _lifeCount: 999
+  _lifeCount: 10
   _ship: {fileID: 0}
   _shipPrefab: {fileID: 0}
   _gold: 999
   _towerPrefab: {fileID: 38418586833770668, guid: 515e88e6002b9784fb90a5deaf4a151b, type: 3}
+  _hpUpdate: {fileID: 11400000, guid: 5b7b9bd171d7f9042983137e0d590797, type: 2}
 --- !u!114 &407129113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -976,6 +977,7 @@ GameObject:
   m_Component:
   - component: {fileID: 565449275}
   - component: {fileID: 565449274}
+  - component: {fileID: 565449276}
   m_Layer: 0
   m_Name: SingleLevelTestObject
   m_TagString: Untagged
@@ -1011,6 +1013,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &565449276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565449273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 188c1e22bb7a6234eb878d8a6c87f164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _doDonDestroyOnLoad: 0
+  _updateData:
+  - props: {fileID: 11400000, guid: 5b7b9bd171d7f9042983137e0d590797, type: 2}
+    updateLevel: 1
 --- !u!1 &607494986
 GameObject:
   m_ObjectHideFlags: 0

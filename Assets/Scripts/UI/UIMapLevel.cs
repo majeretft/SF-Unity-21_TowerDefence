@@ -27,8 +27,6 @@ namespace TowerDefence
         {
             UIMapCompletion.Instance.GetEpisodeScore(_episode, out var prevScore, out _score, out var isFirst);
 
-            print($"name = {_episode.name}, prevScore = {prevScore}");
-
             SetStatus(prevScore > 0 || isFirst);
         }
 
