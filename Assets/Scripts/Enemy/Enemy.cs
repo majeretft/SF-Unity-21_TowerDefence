@@ -46,7 +46,7 @@ namespace TowerDefence
 
         public void GivePlayerGold()
         {
-            TDPlayer.Instance.ChangeCold(_gold);
+            TDPlayer.Instance.AddEnemyGold(_gold);
         }
 
         private bool TryGetFirstSpriteFromAnimation(RuntimeAnimatorController ac, out Sprite sprite)

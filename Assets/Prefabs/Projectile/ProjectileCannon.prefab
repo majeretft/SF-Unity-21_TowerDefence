@@ -49,7 +49,8 @@ MonoBehaviour:
   _speed: 4
   _angularSpeed: 10
   _lifeSpan: 3
-  _damage: 20
+  _damage: 12
+  _damageBonusPerUpdate: 3
   _impactEffectPrefab: {fileID: 6942051652253406210, guid: 3c96ce0046e0aea41a0e103048b26dbb, type: 3}
 --- !u!1 &186888732588673691
 GameObject:

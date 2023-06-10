@@ -717,9 +717,11 @@ MonoBehaviour:
   _lifeCount: 10
   _ship: {fileID: 0}
   _shipPrefab: {fileID: 0}
-  _gold: 999
+  _gold: 0
   _towerPrefab: {fileID: 38418586833770668, guid: 515e88e6002b9784fb90a5deaf4a151b, type: 3}
   _hpUpdate: {fileID: 11400000, guid: 5b7b9bd171d7f9042983137e0d590797, type: 2}
+  _goldUpdate: {fileID: 11400000, guid: 8b3ce884e0bca024dac7fa1134826e14, type: 2}
+  _goldBonusPerUpdate: 10
 --- !u!114 &407129113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1614,7 +1616,7 @@ MonoBehaviour:
   _timer: 20
   _groups:
   - squads:
-    - props: {fileID: 11400000, guid: e8926e35b6fa479448d13be67c102c4d, type: 2}
+    - props: {fileID: 11400000, guid: a06193082bc3967409d1315ba034412b, type: 2}
       count: 1
   _nextWave: {fileID: 0}
 --- !u!1 &946534335
@@ -2708,6 +2710,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 38418586009293820, guid: 515e88e6002b9784fb90a5deaf4a151b, type: 3}
+      propertyPath: _damageUpdate
+      value: 
+      objectReference: {fileID: 11400000, guid: 39c1e2ec5c5727c4dafb19102e94b26c, type: 2}
     - target: {fileID: 38418586833770666, guid: 515e88e6002b9784fb90a5deaf4a151b, type: 3}
       propertyPath: m_Name
       value: Tower

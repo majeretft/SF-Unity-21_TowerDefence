@@ -25,6 +25,7 @@ namespace TowerDefence
         public void NewGame()
         {
             FileHandler.Reset(UIMapCompletion.FILE_NAME);
+            FileHandler.Reset(Updates.FILE_NAME);
             Continue();
         }
 

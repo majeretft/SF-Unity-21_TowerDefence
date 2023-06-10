@@ -72,7 +72,7 @@ namespace TowerDefence
         public void ForceNextWave()
         {
             if (_currentWave)
-                TDPlayer.Instance.ChangeCold((int)_currentWave.GetRemainingTime());
+                TDPlayer.Instance.ChangeGold((int)_currentWave.GetRemainingTime());
 
             SpawnEnemies();
         }

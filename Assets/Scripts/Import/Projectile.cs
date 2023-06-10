@@ -17,11 +17,16 @@ namespace SpaceShooter
         private int _damage;
 
         [SerializeField]
+        private int _damageBonusPerUpdate = 1;
+
+        [SerializeField]
         private ImpactEffect _impactEffectPrefab;
 
         private Distructible _parent;
 
         private float _timer;
+
+        public int UpdateLevel { get; set; }
 
         private void Update()
         {
@@ -36,7 +41,8 @@ namespace SpaceShooter
 
                 if (distructible && distructible != _parent)
                 {
-                    distructible.ApplyDamage(_damage);
+                    print($"Projectile update level = {UpdateLevel}, damage bonus pre level = {_damageBonusPerUpdate}");
+                    distructible.ApplyDamage(_damage + _damageBonusPerUpdate * UpdateLevel);
 
                     // if (_parent == Player.Instance.PlayerShip)
                     //     Player.Instance.AddScore(distructible.ScoreValue);

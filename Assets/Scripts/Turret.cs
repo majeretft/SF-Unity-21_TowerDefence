@@ -1,4 +1,4 @@
-using System;
+using TowerDefence;
 using UnityEngine;
 
 namespace SpaceShooter
@@ -13,6 +13,9 @@ namespace SpaceShooter
         [SerializeField]
         private TurretProperties _properties;
 
+        [SerializeField]
+        private UpdateProperties _damageUpdate;
+
         private float _fireTimer;
         private float _multishotFireTimer;
         private float _multishotRestAmount = 0;
@@ -24,6 +27,7 @@ namespace SpaceShooter
         private RadarDetector _radar;
         private Transform[] _radarTargets;
         private int _radarCurrentTargetIndex;
+        private int _damageUpdateLevel;
         #endregion
 
         #region Unity Events
@@ -31,6 +35,7 @@ namespace SpaceShooter
         {
             _ship = transform.root.GetComponent<Spaceship>();
             _radar = transform.root.GetComponent<RadarDetector>();
+            _damageUpdateLevel = Updates.GetLevel(_damageUpdate);
         }
 
         private void Update()
@@ -115,6 +120,7 @@ namespace SpaceShooter
             var projectile = Instantiate(_properties.ProjectilePrefab, transform.position, Quaternion.identity);
             projectile.transform.up = transform.up;
             projectile.SetParentShooter(_ship);
+            projectile.UpdateLevel = _damageUpdateLevel;
         }
 
         private void LaunchSingleHomingProjectile(Transform target)

@@ -17,8 +17,16 @@ namespace TowerDefence
         [SerializeField]
         private UpdateProperties _hpUpdate;
 
+        [SerializeField]
+        private UpdateProperties _goldUpdate;
+
+        [SerializeField]
+        private int _goldBonusPerUpdate = 1;
+
         private static event Action<int> OnGoldUpdate;
         public static event Action<int> OnHpUpdate;
+
+        private int _goldUpdateLevel = 0;
 
         public static void SubscribeGoldUpdate(Action<int> handler)
         {
@@ -42,25 +50,28 @@ namespace TowerDefence
             OnHpUpdate -= handler;
         }
 
-        protected override void Awake()
-        {
-            base.Awake();
-
-            var level = Updates.GetLevel(_hpUpdate);
-            AddHp(LifeCount * level);
-        }
-
         private void Start()
         {
+            var level = Updates.GetLevel(_hpUpdate);
+            _goldUpdateLevel = Updates.GetLevel(_goldUpdate);
+            AddHp(LifeCount * level);
+
             OnGoldUpdate(_gold);
             OnHpUpdate(LifeCount);
         }
 
-        public void ChangeCold(int value)
+        public void ChangeGold(int value)
         {
             _gold += value;
             OnGoldUpdate(_gold);
         }
+
+        public void AddEnemyGold(int value)
+        {
+            print($"Value = {value}, Gold bonus = {_goldBonusPerUpdate * _goldUpdateLevel}");
+            ChangeGold(value + _goldBonusPerUpdate * _goldUpdateLevel);
+        }
+
 
         public void ReduceHp(int value)
         {
@@ -73,7 +84,7 @@ namespace TowerDefence
             if (_gold < props.goldCost)
                 return;
 
-            ChangeCold(-props.goldCost);
+            ChangeGold(-props.goldCost);
 
             var tower = Instantiate<Tower>(_towerPrefab, buildSite.position, Quaternion.identity);
             tower.UseProps(props);
