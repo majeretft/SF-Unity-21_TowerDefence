@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using SpaceShooter;
 using UnityEngine;
 
@@ -15,6 +16,9 @@ namespace TowerDefence
 
         [SerializeField]
         private EpisodeScore[] _completionData;
+
+        private int _scoreTotal;
+        public int ScoreTotal => _scoreTotal;
 
         public const string FILE_NAME = "game.json";
 
@@ -35,20 +39,7 @@ namespace TowerDefence
         {
             base.Awake();
             Saver<EpisodeScore>.TryLoad(FILE_NAME, ref _completionData);
-        }
-
-        public bool TryIndex(int id, out Episode episode, out int score)
-        {
-            if (id >= 0 && id < _completionData.Length)
-            {
-                episode = _completionData[id].episode;
-                score = _completionData[id].score;
-                return true;
-            }
-
-            episode = null;
-            score = 0;
-            return false;
+            _scoreTotal = _completionData.Aggregate(0, (acc, val) => acc += val.score);
         }
 
         private void SaveResult(Episode currentEpisode, int levelScore)
@@ -60,6 +51,49 @@ namespace TowerDefence
                     item.score = levelScore;
                     Saver<EpisodeScore>.TrySave(FILE_NAME, _completionData);
                 }
+            }
+        }
+
+        public int GetEpisodeScore(Episode episode)
+        {
+            if (!episode)
+                return 0;
+
+            for (int i = 0; i < _completionData.Length; i++)
+            {
+                if (_completionData[i].episode.GetInstanceID() != episode.GetInstanceID())
+                    continue;
+
+                return _completionData[i].score;
+            }
+
+            return 0;
+        }
+
+        public void GetEpisodeScore(Episode episode, out int prevScore, out int score, out bool isFirst)
+        {
+            isFirst = false;
+            score = 0;
+            prevScore = 0;
+
+            if (!episode) {
+                return;
+            }
+
+            for (int i = 0; i < _completionData.Length; i++)
+            {
+                if (_completionData[i].episode.GetInstanceID() != episode.GetInstanceID())
+                    continue;
+
+                score = _completionData[i].score;
+                isFirst = i == 0;
+
+                if (isFirst)
+                    break;
+
+                prevScore = _completionData[i - 1].score;
+
+                break;
             }
         }
     }
