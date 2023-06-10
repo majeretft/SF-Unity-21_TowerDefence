@@ -1,3 +1,4 @@
+using System;
 using SpaceShooter;
 using UnityEngine;
 
@@ -14,6 +15,10 @@ namespace TowerDefence
         [SerializeField]
         private EnemyWave _currentWave;
 
+        private int _aliveEnemyCount = 0;
+
+        public event Action OnWavesComplete;
+
         private void Start()
         {
             _currentWave.Prepare(SpawnEnemies);
@@ -21,6 +26,14 @@ namespace TowerDefence
 
         private void SpawnEnemies()
         {
+            if (!_currentWave)
+            {
+                if (_aliveEnemyCount <= 0)
+                    OnWavesComplete?.Invoke();
+                
+                return;
+            }
+
             foreach ((EnemyProperties props, int count, int pathIndex) in _currentWave.EnumerateSquads())
             {
                 if (pathIndex >= _paths.Length || pathIndex < 0)
@@ -32,6 +45,8 @@ namespace TowerDefence
                 for (int i = 0; i < count; i++)
                 {
                     var instance = Instantiate(_enemyPrefab, _paths[pathIndex].StartPoint.GetRandomPointInsideArea(), Quaternion.identity);
+                    _aliveEnemyCount++;
+                    instance.OnDestroyEvent += RecordEnemyDeath;
 
                     instance.UseProps(props);
 
@@ -42,6 +57,24 @@ namespace TowerDefence
             }
 
             _currentWave = _currentWave.PrepareNext(SpawnEnemies);
+        }
+
+        private void RecordEnemyDeath()
+        {
+            _aliveEnemyCount--;
+
+            if (_aliveEnemyCount > 0)
+                return;
+
+            ForceNextWave();
+        }
+
+        public void ForceNextWave()
+        {
+            if (_currentWave)
+                TDPlayer.Instance.ChangeCold((int)_currentWave.GetRemainingTime());
+
+            SpawnEnemies();
         }
     }
 }

@@ -213,6 +213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 714308f60b4724d4093646d2235b611b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _startPoint: {fileID: 0}
   _points:
   - {fileID: 482182202}
   - {fileID: 121029972}
@@ -459,7 +460,7 @@ MonoBehaviour:
   _lifeCount: 20
   _ship: {fileID: 0}
   _shipPrefab: {fileID: 0}
-  _gold: 4
+  _gold: 900
   _towerPrefab: {fileID: 38418586833770668, guid: 515e88e6002b9784fb90a5deaf4a151b, type: 3}
 --- !u!114 &407129113
 MonoBehaviour:
@@ -487,7 +488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _doDonDestroyOnLoad: 0
-  _referenceTime: 2
+  _referenceTime: 900
   _levelCompletedEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1446,6 +1447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 714308f60b4724d4093646d2235b611b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _startPoint: {fileID: 0}
   _points:
   - {fileID: 553104163}
   - {fileID: 121029972}

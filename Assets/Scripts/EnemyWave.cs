@@ -19,6 +19,8 @@ namespace TowerDefence
             public Squad[] squads;
         }
 
+        public static event Action<float> OnWavePrepare;
+
         [SerializeField]
         private float _timer = 10f;
 
@@ -57,6 +59,8 @@ namespace TowerDefence
 
         public void Prepare(Action spawnEnemies)
         {
+            OnWavePrepare?.Invoke(_timer);
+
             enabled = true;
             _timer += Time.time;
 
@@ -67,12 +71,15 @@ namespace TowerDefence
         {
             OnWaveReady -= spawnEnemies;
 
-            if (!_nextWave)
-                return null;
-
-            _nextWave.Prepare(spawnEnemies);
+            if (_nextWave)
+                _nextWave.Prepare(spawnEnemies);
 
             return _nextWave;
+        }
+
+        public float GetRemainingTime()
+        {
+            return _timer - Time.time;
         }
     }
 }

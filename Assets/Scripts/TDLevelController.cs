@@ -61,6 +61,7 @@ namespace TowerDefence
             DisableAll<Spawner>();
             DisableAll<Projectile>();
             DisableAll<Tower>();
+            DisableAll<NextWaveUI>();
         }
 
         private void ResumeLevelActivity()
@@ -73,6 +74,7 @@ namespace TowerDefence
             EnableAll<Spawner>();
             EnableAll<Projectile>();
             EnableAll<Tower>();
+            EnableAll<NextWaveUI>();
         }
 
         private void DisableAll<T>() where T : MonoBehaviour

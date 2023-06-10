@@ -1,5 +1,6 @@
 using SpaceShooter;
 using UnityEngine;
+using System;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -15,6 +16,8 @@ namespace TowerDefence
 
         [SerializeField]
         private int _gold = 1;
+
+        public event Action OnDestroyEvent;
 
         public void UseProps(EnemyProperties props)
         {
@@ -59,6 +62,11 @@ namespace TowerDefence
             sprite = (Sprite)keyframes[0].value;
 
             return true;
+        }
+
+        private void OnDestroy()
+        {
+            OnDestroyEvent?.Invoke();
         }
     }
 
