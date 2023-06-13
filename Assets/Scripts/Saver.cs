@@ -25,7 +25,7 @@ namespace TowerDefence
         {
             var path = FileHandler.GetPath(filename);
             var wrapper = new Saver<T> { data = data };
-            var json = JsonUtility.ToJson(wrapper);
+            var json = JsonUtility.ToJson(wrapper, true);
             File.WriteAllText(path, json);
         }
     }

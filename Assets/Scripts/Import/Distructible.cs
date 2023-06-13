@@ -48,6 +48,7 @@ namespace SpaceShooter
         /// <summary>
         /// Current hit points amount
         /// </summary>
+        [SerializeField]
         private int _hitPoints;
 
         /// <summary>

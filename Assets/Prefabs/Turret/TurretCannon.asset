@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TurretCannon
   m_EditorClassIdentifier: 
   _mode: 0
-  _projectilePrefab: {fileID: 186888731484959139, guid: 8266931d2d4b5c14283e514c18620c87, type: 3}
+  _projectilePrefab: {fileID: 6802505549958075646, guid: 8266931d2d4b5c14283e514c18620c87, type: 3}
   _fireRate: 4
   _energyCost: 0
   _ammoCost: 0

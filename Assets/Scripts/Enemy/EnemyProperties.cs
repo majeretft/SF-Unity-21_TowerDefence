@@ -13,6 +13,8 @@ namespace TowerDefence
         [Header("Stats")]
         public float moveSpeed = 1;
         public int hp = 1;
+        public int armor = 0;
+        public ArmorEnum _armorType;
         public int score = 1;
         [Range(0.1f, 10f)]
         public float radius = 0.2f;

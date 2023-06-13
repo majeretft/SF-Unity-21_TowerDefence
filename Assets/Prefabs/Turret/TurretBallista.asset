@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TurretBallista
   m_EditorClassIdentifier: 
   _mode: 0
-  _projectilePrefab: {fileID: 186888731484959139, guid: b283f4a63cf386c438b9cd45fa991857, type: 3}
+  _projectilePrefab: {fileID: -7754338175073127821, guid: b283f4a63cf386c438b9cd45fa991857, type: 3}
   _fireRate: 2
   _energyCost: 0
   _ammoCost: 0

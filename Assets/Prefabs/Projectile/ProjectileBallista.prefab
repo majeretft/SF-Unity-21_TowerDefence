@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 186888731484959138}
-  - component: {fileID: 186888731484959139}
+  - component: {fileID: -7754338175073127821}
   m_Layer: 0
   m_Name: ProjectileBallista
   m_TagString: Untagged
@@ -33,7 +33,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &186888731484959139
+--- !u!114 &-7754338175073127821
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,7 +42,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 186888731484959140}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c814a2b7a0fb4d469a2cf614c853416, type: 3}
+  m_Script: {fileID: 11500000, guid: 654037972fccb9544ad2384065c25aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _interactiveName: 

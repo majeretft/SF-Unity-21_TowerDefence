@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b5fbc48150fa944b819cfd1c6bea186, type: 3}
-  m_Name: TurretArcher
+  m_Name: TurreMage
   m_EditorClassIdentifier: 
   _mode: 0
-  _projectilePrefab: {fileID: 2964368298615108018, guid: 324dd860778bd224a897290476f3582a, type: 3}
-  _fireRate: 1
+  _projectilePrefab: {fileID: -4651847103271003524, guid: 481d6b1020c5328428c2a344f253fa73, type: 3}
+  _fireRate: 0.85
   _energyCost: 0
   _ammoCost: 0
   _isHoming: 0

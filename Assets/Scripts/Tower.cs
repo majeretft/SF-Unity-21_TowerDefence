@@ -13,6 +13,13 @@ namespace TowerDefence
         private float _radius = 5f;
 
         private Turret[] _turrets;
+#if UNITY_EDITOR
+        public Turret[] Turrets
+        {
+            get => _turrets;
+            set => _turrets = value;
+        }
+#endif
 
         private Distructible _target;
 
@@ -69,10 +76,20 @@ namespace TowerDefence
     [CustomEditor(typeof(Tower))]
     public class TowerInspector : Editor
     {
+        private Tower _target;
+
+        private void OnEnable()
+        {
+            _target = target as Tower;
+            _target.Turrets = _target.GetComponentsInChildren<Turret>();
+        }
+
         public override void OnInspectorGUI()
         {
             base.OnInspectorGUI();
-            var props = EditorGUILayout.ObjectField(null, typeof(TowerProperties), false) as TowerProperties;
+            var props =
+                EditorGUILayout.ObjectField(null, typeof(TowerProperties), false)
+                as TowerProperties;
 
             if (props)
             {
