@@ -44,10 +44,10 @@ namespace TowerDefence
             void LifeScoreChange(int _)
             {
                 _levelScore--;
-                TDPlayer.OnHpUpdate -= LifeScoreChange;
+                TDPlayer.Instance.OnHpUpdate -= LifeScoreChange;
             }
 
-            TDPlayer.OnHpUpdate += LifeScoreChange;
+            TDPlayer.Instance.OnHpUpdate += LifeScoreChange;
         }
 
         private void StopLevelActivity()
@@ -62,6 +62,7 @@ namespace TowerDefence
             DisableAll<Projectile>();
             DisableAll<Tower>();
             DisableAll<NextWaveUI>();
+            DisableAll<EnemyWave>();
         }
 
         private void ResumeLevelActivity()
@@ -75,6 +76,7 @@ namespace TowerDefence
             EnableAll<Projectile>();
             EnableAll<Tower>();
             EnableAll<NextWaveUI>();
+            EnableAll<EnemyWave>();
         }
 
         private void DisableAll<T>() where T : MonoBehaviour

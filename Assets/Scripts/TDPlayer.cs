@@ -23,29 +23,29 @@ namespace TowerDefence
         [SerializeField]
         private int _goldBonusPerUpdate = 1;
 
-        private static event Action<int> OnGoldUpdate;
-        public static event Action<int> OnHpUpdate;
+        private event Action<int> OnGoldUpdate;
+        public event Action<int> OnHpUpdate;
 
         private int _goldUpdateLevel = 0;
 
-        public static void SubscribeGoldUpdate(Action<int> handler)
+        public void SubscribeGoldUpdate(Action<int> handler)
         {
             OnGoldUpdate += handler;
             OnGoldUpdate(Instance ? Instance._gold : 0);
         }
 
-        public static void SubscribeHpUpdate(Action<int> handler)
+        public void SubscribeHpUpdate(Action<int> handler)
         {
             OnHpUpdate += handler;
             OnHpUpdate(Instance ? Instance.LifeCount : 0);
         }
 
-        public static void UnSubscribeGoldUpdate(Action<int> handler)
+        public void UnSubscribeGoldUpdate(Action<int> handler)
         {
             OnGoldUpdate -= handler;
         }
 
-        public static void UnSubscribeHpUpdate(Action<int> handler)
+        public void UnSubscribeHpUpdate(Action<int> handler)
         {
             OnHpUpdate -= handler;
         }

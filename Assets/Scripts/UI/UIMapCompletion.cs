@@ -25,9 +25,20 @@ namespace TowerDefence
         public static void SaveEpisodeResult(int levelScore)
         {
             if (Instance)
-                Instance.SaveResult(LevelSequenceController.Instance.CurrentEpisode, levelScore);
-            else
+            {
+                foreach (var item in UIMapCompletion.Instance._completionData)
+                {
+                    if (item.episode == LevelSequenceController.Instance.CurrentEpisode && levelScore > item.score)
+                    {
+                        item.score = levelScore;
+                        Saver<EpisodeScore>.TrySave(FILE_NAME, UIMapCompletion.Instance._completionData);
+                    }
+                }
+                UIMapCompletion.Instance._scoreTotal = UIMapCompletion.Instance._completionData.Aggregate(0, (acc, val) => acc += val.score);
+            }
+            else {
                 Debug.Log($"Level completed with score: {levelScore}");
+            }
         }
 
         public static void ResetSavedData()
@@ -40,18 +51,6 @@ namespace TowerDefence
             base.Awake();
             Saver<EpisodeScore>.TryLoad(FILE_NAME, ref _completionData);
             _scoreTotal = _completionData.Aggregate(0, (acc, val) => acc += val.score);
-        }
-
-        private void SaveResult(Episode currentEpisode, int levelScore)
-        {
-            foreach (var item in _completionData)
-            {
-                if (item.episode == currentEpisode && levelScore > item.score)
-                {
-                    item.score = levelScore;
-                    Saver<EpisodeScore>.TrySave(FILE_NAME, _completionData);
-                }
-            }
         }
 
         public int GetEpisodeScore(Episode episode)
@@ -70,13 +69,19 @@ namespace TowerDefence
             return 0;
         }
 
-        public void GetEpisodeScore(Episode episode, out int prevScore, out int score, out bool isFirst)
+        public void GetEpisodeScore(
+            Episode episode,
+            out int prevScore,
+            out int score,
+            out bool isFirst
+        )
         {
             isFirst = false;
             score = 0;
             prevScore = 0;
 
-            if (!episode) {
+            if (!episode)
+            {
                 return;
             }
 

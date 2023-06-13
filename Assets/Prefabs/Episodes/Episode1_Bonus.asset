@@ -15,5 +15,5 @@ MonoBehaviour:
   _episodeName: Episode 1 Bonus
   _episodeText: 
   _levels:
-  - Level_1
+  - SampleScene
   _previewImage: {fileID: 0}

@@ -23,20 +23,16 @@ namespace TowerDefence
             _buildSite = position;
         }
 
-        private void Awake()
-        {
-            TDPlayer.SubscribeGoldUpdate(GoldStatusCheck);
-        }
-
         private void Start()
         {
+            TDPlayer.Instance.SubscribeGoldUpdate(GoldStatusCheck);
             _text.text = _props.goldCost.ToString();
             _button.GetComponent<Image>().sprite = _props.spriteGui;
         }
 
         private void OnDestroy()
         {
-            TDPlayer.UnSubscribeGoldUpdate(GoldStatusCheck);
+            TDPlayer.Instance.UnSubscribeGoldUpdate(GoldStatusCheck);
         }
 
         private void GoldStatusCheck(int gold)

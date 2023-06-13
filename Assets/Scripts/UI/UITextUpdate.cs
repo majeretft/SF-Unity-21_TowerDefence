@@ -15,15 +15,15 @@ namespace TowerDefence
 
         public UpdateSource source = UpdateSource.Gold;
 
-        private void Awake()
+        private void Start()
         {
             _text = GetComponent<TextMeshProUGUI>();
 
             if (source == UpdateSource.Gold)
-                TDPlayer.SubscribeGoldUpdate(UpdateText);
+                TDPlayer.Instance.SubscribeGoldUpdate(UpdateText);
 
             if (source == UpdateSource.HP)
-                TDPlayer.SubscribeHpUpdate(UpdateText);
+                TDPlayer.Instance.SubscribeHpUpdate(UpdateText);
         }
 
         private void UpdateText(int value)
@@ -34,10 +34,10 @@ namespace TowerDefence
         private void OnDestroy()
         {
             if (source == UpdateSource.Gold)
-                TDPlayer.UnSubscribeGoldUpdate(UpdateText);
+                TDPlayer.Instance.UnSubscribeGoldUpdate(UpdateText);
 
             if (source == UpdateSource.HP)
-                TDPlayer.UnSubscribeHpUpdate(UpdateText);
+                TDPlayer.Instance.UnSubscribeHpUpdate(UpdateText);
         }
     }
 }

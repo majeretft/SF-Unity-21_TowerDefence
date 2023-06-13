@@ -31,5 +31,10 @@ namespace TowerDefence
                 tbc.SetBuildSite(buildSite);
             }
         }
+
+        private void OnDestroy()
+        {
+            BuildSite.OnClick -= MoveToBuildSite;
+        }
     }
 }
