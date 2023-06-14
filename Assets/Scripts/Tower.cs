@@ -37,6 +37,9 @@ namespace TowerDefence
             {
                 turret.UseProps(props.turretProps);
             }
+
+            var buildSite = GetComponentInChildren<BuildSite>();
+            buildSite.AvailableTowers = props.updatesTo;
         }
 
         private void Update()

@@ -10,14 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b523af0d06a4f843a81177b66c67534, type: 3}
-  m_Name: TowerMage
+  m_Name: TowerMage2
   m_EditorClassIdentifier: 
-  goldCost: 20
-  spriteGui: {fileID: 21300000, guid: 8d3c0c2860644c84ab9916741ce3843f, type: 3}
-  sprite: {fileID: 21300000, guid: 09143938c6ccdce4a8a2d811556bd038, type: 3}
-  radius: 4
+  goldCost: 40
+  spriteGui: {fileID: 21300000, guid: a1088eff2e5c4b94bb17c0251dd18656, type: 3}
+  sprite: {fileID: 21300000, guid: 748876ffff424394f891050b0021e954, type: 3}
+  radius: 5
   turretProps: {fileID: 11400000, guid: 7c9fe99d50a4c1e4e8e1bd8cc7c6036e, type: 2}
-  updatesTo:
-  - {fileID: 11400000, guid: f781ebc0ca9a84845a4b742af669ab93, type: 2}
+  updatesTo: []
   requiredUpdate: {fileID: 11400000, guid: bd0e9a9520a409f41b8eb32c0292b734, type: 2}
-  requiredUpdateLevel: 1
+  requiredUpdateLevel: 2

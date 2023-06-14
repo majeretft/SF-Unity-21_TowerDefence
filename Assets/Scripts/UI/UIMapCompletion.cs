@@ -26,15 +26,15 @@ namespace TowerDefence
         {
             if (Instance)
             {
-                foreach (var item in UIMapCompletion.Instance._completionData)
+                foreach (var item in Instance._completionData)
                 {
                     if (item.episode == LevelSequenceController.Instance.CurrentEpisode && levelScore > item.score)
                     {
                         item.score = levelScore;
-                        Saver<EpisodeScore>.TrySave(FILE_NAME, UIMapCompletion.Instance._completionData);
+                        Saver<EpisodeScore>.TrySave(FILE_NAME, Instance._completionData);
                     }
                 }
-                UIMapCompletion.Instance._scoreTotal = UIMapCompletion.Instance._completionData.Aggregate(0, (acc, val) => acc += val.score);
+                Instance._scoreTotal = Instance._completionData.Aggregate(0, (acc, val) => acc += val.score);
             }
             else {
                 Debug.Log($"Level completed with score: {levelScore}");

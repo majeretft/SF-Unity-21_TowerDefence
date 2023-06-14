@@ -23,6 +23,11 @@ namespace TowerDefence
             _buildSite = position;
         }
 
+        public void SetProps(TowerProperties props)
+        {
+            _props = props;
+        }
+
         private void Start()
         {
             TDPlayer.Instance.SubscribeGoldUpdate(GoldStatusCheck);

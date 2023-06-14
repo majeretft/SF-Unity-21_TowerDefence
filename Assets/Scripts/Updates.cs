@@ -35,7 +35,8 @@ namespace TowerDefence
 
             foreach (var u in Instance._updateData)
             {
-                for (var i = 0; i < u.updateLevel; i++) {
+                for (var i = 0; i < u.updateLevel; i++)
+                {
                     result += u.props.costByLevel[i];
                 }
             }

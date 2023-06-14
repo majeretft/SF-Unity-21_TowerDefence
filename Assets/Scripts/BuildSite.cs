@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -6,11 +7,32 @@ namespace TowerDefence
 {
     public class BuildSite : MonoBehaviour, IPointerDownHandler
     {
-        public static event Action<Transform> OnClick;
+        [SerializeField]
+        private TowerProperties[] _availableTowers;
+
+        public TowerProperties[] AvailableTowers
+        {
+            get
+            {
+                return _availableTowers;
+            }
+            set
+            {
+                if (value == null || value.Length < 1)
+                {
+                    Destroy(transform.parent.gameObject);
+                    // gameObject.SetActive(false);
+                }
+
+                _availableTowers = value;
+            }
+        }
+
+        public static event Action<BuildSite> OnClick;
 
         public virtual void OnPointerDown(PointerEventData eventData)
         {
-            OnClick(transform.root);
+            OnClick(this);
         }
 
         public static void HideControls()

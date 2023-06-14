@@ -89,6 +89,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aed5cd58f34cb647b96ff05439f7ecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _availableTowers:
+  - {fileID: 11400000, guid: 001c7475c1ef4104a8549e4cabaf4920, type: 2}
+  - {fileID: 11400000, guid: 418641eef44e966468a2cb0ef1decc26, type: 2}
 --- !u!1 &8519150797624144477
 GameObject:
   m_ObjectHideFlags: 0

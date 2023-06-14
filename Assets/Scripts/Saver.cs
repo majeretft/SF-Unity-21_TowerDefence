@@ -39,7 +39,7 @@ namespace TowerDefence
 
         public static void Reset(string filename)
         {
-            var path = FileHandler.GetPath(filename);
+            var path = GetPath(filename);
 
             if (File.Exists(path))
             {
@@ -49,7 +49,7 @@ namespace TowerDefence
 
         public static bool HasFile(string filename)
         {
-            var path = FileHandler.GetPath(filename);
+            var path = GetPath(filename);
 
             return File.Exists(path);
         }

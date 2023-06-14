@@ -309,6 +309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6d089c1bb0a2d4da46b45489ed918c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _availableTowers: []
 --- !u!1 &332731529
 GameObject:
   m_ObjectHideFlags: 0
@@ -1134,6 +1135,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD
       objectReference: {fileID: 0}
+    - target: {fileID: 6164876479963280499, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
+      propertyPath: _prefab
+      value: 
+      objectReference: {fileID: 688670070342587873, guid: f5ee3ba6fb90f894f9d0dfcd3854ea44, type: 3}
+    - target: {fileID: 6164876479963280499, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
+      propertyPath: _mageTowerProps
+      value: 
+      objectReference: {fileID: 11400000, guid: bd0e9a9520a409f41b8eb32c0292b734, type: 2}
+    - target: {fileID: 6164876479963280499, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
+      propertyPath: _propsArray.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6164876479963280499, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
+      propertyPath: _propsArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 001c7475c1ef4104a8549e4cabaf4920, type: 2}
+    - target: {fileID: 6164876479963280499, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
+      propertyPath: _propsArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 418641eef44e966468a2cb0ef1decc26, type: 2}
+    - target: {fileID: 6164876479963280499, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
+      propertyPath: _propsArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 418641eef44e966468a2cb0ef1decc26, type: 2}
+    - target: {fileID: 6164876479963280499, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
+      propertyPath: _propsArray.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 001c7475c1ef4104a8549e4cabaf4920, type: 2}
+    - target: {fileID: 6164876479963280499, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
+      propertyPath: _propsArray.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 001c7475c1ef4104a8549e4cabaf4920, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
 --- !u!1 &1228223884
@@ -1694,11 +1727,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 38418586833770667, guid: 515e88e6002b9784fb90a5deaf4a151b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.18
+      value: -0.09
       objectReference: {fileID: 0}
     - target: {fileID: 38418586833770667, guid: 515e88e6002b9784fb90a5deaf4a151b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.96
+      value: -0.79
       objectReference: {fileID: 0}
     - target: {fileID: 38418586833770667, guid: 515e88e6002b9784fb90a5deaf4a151b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1849,6 +1882,18 @@ PrefabInstance:
     - target: {fileID: 6256429709694249859, guid: 88e566ccde62be9499413a7709ad0e98, type: 3}
       propertyPath: m_Name
       value: SingleLevelTestObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 6256429709694249862, guid: 88e566ccde62be9499413a7709ad0e98, type: 3}
+      propertyPath: _updateData.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6256429709694249862, guid: 88e566ccde62be9499413a7709ad0e98, type: 3}
+      propertyPath: _updateData.Array.data[1].props
+      value: 
+      objectReference: {fileID: 11400000, guid: bd0e9a9520a409f41b8eb32c0292b734, type: 2}
+    - target: {fileID: 6256429709694249862, guid: 88e566ccde62be9499413a7709ad0e98, type: 3}
+      propertyPath: _updateData.Array.data[1].updateLevel
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88e566ccde62be9499413a7709ad0e98, type: 3}

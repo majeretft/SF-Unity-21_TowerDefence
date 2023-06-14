@@ -56,14 +56,14 @@ namespace TowerDefence
             _goldUpdateLevel = Updates.GetLevel(_goldUpdate);
             AddHp(LifeCount * level);
 
-            OnGoldUpdate(_gold);
-            OnHpUpdate(LifeCount);
+            OnGoldUpdate?.Invoke(_gold);
+            OnHpUpdate?.Invoke(LifeCount);
         }
 
         public void ChangeGold(int value)
         {
             _gold += value;
-            OnGoldUpdate(_gold);
+            OnGoldUpdate?.Invoke(_gold);
         }
 
         public void AddEnemyGold(int value)
