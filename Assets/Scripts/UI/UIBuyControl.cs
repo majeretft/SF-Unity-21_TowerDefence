@@ -30,7 +30,7 @@ namespace TowerDefence
                 {
                     if (prop.IsAvailable())
                     {
-                        print(transform.name);
+                        // print(transform.name);
                         var ctrl = Instantiate(_prefab, transform);
                         ctrl.SetProps(prop);
                         _activeControl.Add(ctrl);
@@ -60,9 +60,12 @@ namespace TowerDefence
             }
             else
             {
-                foreach (var ctrl in _activeControl)
-                    Destroy(ctrl.gameObject);
-                _activeControl.Clear();
+                if (_activeControl != null)
+                {
+                    foreach (var ctrl in _activeControl)
+                        Destroy(ctrl.gameObject);
+                    _activeControl.Clear();
+                }
                 gameObject.SetActive(false);
             }
         }

@@ -68,7 +68,7 @@ namespace TowerDefence
 
         public void AddEnemyGold(int value)
         {
-            print($"Value = {value}, Gold bonus = {_goldBonusPerUpdate * _goldUpdateLevel}");
+            // print($"Value = {value}, Gold bonus = {_goldBonusPerUpdate * _goldUpdateLevel}");
             ChangeGold(value + _goldBonusPerUpdate * _goldUpdateLevel);
         }
 

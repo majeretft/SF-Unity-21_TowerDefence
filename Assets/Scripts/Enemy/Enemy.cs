@@ -23,7 +23,7 @@ namespace TowerDefence
             // ArmorEnum.Physical
             (int power, DamageEnum type, int armor) =>
             {
-                print($"ArmorEnum.Physical: power {power}, damage type {type}, armor {armor}");
+                // print($"ArmorEnum.Physical: power {power}, damage type {type}, armor {armor}");
                 switch (type)
                 {
                     case DamageEnum.Magical:
@@ -35,7 +35,7 @@ namespace TowerDefence
             // ArmorEnum.Magical
             (int power, DamageEnum type, int armor) =>
             {
-                print($"ArmorEnum.Magical: power {power}, damage type {type}, armor {armor}");
+                // print($"ArmorEnum.Magical: power {power}, damage type {type}, armor {armor}");
                 if (type == DamageEnum.Physical)
                 {
                     return power / 2;

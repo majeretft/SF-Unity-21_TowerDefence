@@ -6,6 +6,8 @@ namespace TowerDefence
 {
     public class EnemyWaveController : MonoBehaviour
     {
+        public static event Action<Enemy> OnEnemySpawned;
+
         [SerializeField]
         private Enemy _enemyPrefab;
 
@@ -53,6 +55,8 @@ namespace TowerDefence
                     var ai = instance.GetComponent<TDPatrolController>();
                     ai.Behaviour = AiBehaviourEnum.Patrol;
                     ai.SetPath(_paths[pathIndex]);
+
+                    OnEnemySpawned?.Invoke(instance);
                 }
             }
 

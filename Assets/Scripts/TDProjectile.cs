@@ -21,7 +21,7 @@ namespace TowerDefence
 
             if (enemy)
             {
-                print($"Projectile update level = {UpdateLevel}, damage bonus pre level = {_damageBonusPerUpdate}");
+                // print($"Projectile update level = {UpdateLevel}, damage bonus pre level = {_damageBonusPerUpdate}");
                 enemy.TakeDamage(_damage + _damageBonusPerUpdate * UpdateLevel, _damageType);
             }
         }

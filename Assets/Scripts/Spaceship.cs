@@ -34,6 +34,7 @@ namespace SpaceShooter
         /// </summary>
         [SerializeField]
         private float _speedLinearMax;
+        private float _speedLinearMaxInitial;
         public float SpeedLinearMax => _speedLinearMax;
 
         /// <summary>
@@ -140,6 +141,16 @@ namespace SpaceShooter
             return;
         }
 
+        public void DecreaseLinearVelocity()
+        {
+            _speedLinearMax = _speedLinearMaxInitial / 2;
+        }
+
+        public void RestoreLinearVelocity()
+        {
+            _speedLinearMax = _speedLinearMaxInitial;
+        }
+
         /// <summary>
         /// Add energy for turrets
         /// </summary>
@@ -243,6 +254,7 @@ namespace SpaceShooter
         {
             base.UseProps(props);
             _speedLinearMax = props.moveSpeed;
+            _speedLinearMaxInitial = _speedLinearMax;
         }
     }
 }
