@@ -220,17 +220,6 @@ MonoBehaviour:
   - {fileID: 1535144329}
   - {fileID: 633651497}
   - {fileID: 2020828519}
---- !u!114 &269789833 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 269789833, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
-  m_PrefabInstance: {fileID: 1180982729}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &284074456
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,24 +1040,6 @@ Transform:
   m_Father: {fileID: 536064882}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1150862721 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1150862721, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
-  m_PrefabInstance: {fileID: 1180982729}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1150862726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1150862721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9feddc88cf584340935313f4243ba70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _doDonDestroyOnLoad: 0
 --- !u!1001 &1180982729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1076,70 +1047,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 800277970, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
-      propertyPath: _fireButton
-      value: 
-      objectReference: {fileID: 1311047311}
-    - target: {fileID: 800277970, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
-      propertyPath: _slowButton
-      value: 
-      objectReference: {fileID: 269789833}
-    - target: {fileID: 800277970, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
-      propertyPath: _fireAbilityTarget
-      value: 
-      objectReference: {fileID: 1519256237}
-    - target: {fileID: 800277970, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
-      propertyPath: _fireAbility._damage
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 1150862722, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1150862722, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1150862722, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1150862722, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1150862722, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1150862722, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1150862722, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1150862724, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1150862724, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1150862724, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1150862724, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1150862724, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6164876478373435939, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1286,17 +1193,6 @@ MonoBehaviour:
   - {fileID: 563761859}
   - {fileID: 633651497}
   - {fileID: 2020828519}
---- !u!114 &1311047311 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1311047311, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
-  m_PrefabInstance: {fileID: 1180982729}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1331084199
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1502,17 +1398,6 @@ MonoBehaviour:
     - props: {fileID: 11400000, guid: a06193082bc3967409d1315ba034412b, type: 2}
       count: 1
   _nextWave: {fileID: 946534337}
---- !u!114 &1519256237 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1519256237, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
-  m_PrefabInstance: {fileID: 1180982729}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1535144327
 GameObject:
   m_ObjectHideFlags: 0
@@ -1803,6 +1688,10 @@ PrefabInstance:
     - target: {fileID: 38418586833770666, guid: 515e88e6002b9784fb90a5deaf4a151b, type: 3}
       propertyPath: m_Name
       value: Tower
+      objectReference: {fileID: 0}
+    - target: {fileID: 38418586833770666, guid: 515e88e6002b9784fb90a5deaf4a151b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 38418586833770667, guid: 515e88e6002b9784fb90a5deaf4a151b, type: 3}
       propertyPath: m_RootOrder
