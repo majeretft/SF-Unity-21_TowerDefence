@@ -1,0 +1,21 @@
+{
+  "name": "21_tower-defence",
+  "version": "1.0.0",
+  "description": "Star Icon\r <a href=\"https://www.flaticon.com/free-stickers/happy\" title=\"happy stickers\">Happy stickers created by Stickers - Flaticon</a>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/majeretft/SF-Unity-21_TowerDefence.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/majeretft/SF-Unity-21_TowerDefence/issues"
+  },
+  "homepage": "https://github.com/majeretft/SF-Unity-21_TowerDefence#readme",
+  "type": "module"
+}

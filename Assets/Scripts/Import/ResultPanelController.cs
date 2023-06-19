@@ -1,27 +1,27 @@
-using TMPro;
+// using TMPro;
 using UnityEngine;
 
 namespace SpaceShooter
 {
     public class ResultPanelController : SingletonBase<ResultPanelController>
     {
-        [SerializeField]
-        private TextMeshProUGUI _kills;
+        // [SerializeField]
+        // private TextMeshProUGUI _kills;
 
-        [SerializeField]
-        private TextMeshProUGUI _score;
+        // [SerializeField]
+        // private TextMeshProUGUI _score;
 
-        [SerializeField]
-        private TextMeshProUGUI _time;
+        // [SerializeField]
+        // private TextMeshProUGUI _time;
 
-        [SerializeField]
-        private TextMeshProUGUI _timeRecord;
+        // [SerializeField]
+        // private TextMeshProUGUI _timeRecord;
 
-        [SerializeField]
-        private TextMeshProUGUI _result;
+        // [SerializeField]
+        // private TextMeshProUGUI _result;
 
-        [SerializeField]
-        private TextMeshProUGUI _buttonNextText;
+        // [SerializeField]
+        // private TextMeshProUGUI _buttonNextText;
 
         [SerializeField]
         private GameObject _panelSuccess;
@@ -29,7 +29,7 @@ namespace SpaceShooter
         [SerializeField]
         private GameObject _panelFailure;
 
-        private bool _isSuccess;
+        // private bool _isSuccess;
 
         private void Start()
         {

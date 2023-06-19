@@ -53,6 +53,8 @@ MonoBehaviour:
   _damageBonusPerUpdate: 50
   _impactEffectPrefab: {fileID: 6942051652253406210, guid: 3c96ce0046e0aea41a0e103048b26dbb, type: 3}
   _damageType: 1
+  _soundStart: 11
+  _soundHit: 1
 --- !u!1 &186888732588673691
 GameObject:
   m_ObjectHideFlags: 0

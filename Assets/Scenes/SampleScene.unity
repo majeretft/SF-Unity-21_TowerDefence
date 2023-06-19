@@ -356,6 +356,17 @@ Transform:
   m_Father: {fileID: 536064882}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &415015703 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6322337073362363579, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
+  m_PrefabInstance: {fileID: 1180982729}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba2e0f8d01fc0c4090165ba178d8ed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &482182200
 GameObject:
   m_ObjectHideFlags: 0
@@ -1047,6 +1058,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2033703907, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033703907, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033703907, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 415015703}
+    - target: {fileID: 2033703907, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033703907, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033703907, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TowerDefence.SoundHook, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033703907, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6164876478373435939, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1680,11 +1719,11 @@ PrefabInstance:
     - target: {fileID: 38418586009293820, guid: 515e88e6002b9784fb90a5deaf4a151b, type: 3}
       propertyPath: _properties
       value: 
-      objectReference: {fileID: 11400000, guid: 7c9fe99d50a4c1e4e8e1bd8cc7c6036e, type: 2}
+      objectReference: {fileID: 11400000, guid: 0b152f56289f46a4693e3bb8ae1b0ff4, type: 2}
     - target: {fileID: 38418586009293820, guid: 515e88e6002b9784fb90a5deaf4a151b, type: 3}
       propertyPath: _damageUpdate
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 39c1e2ec5c5727c4dafb19102e94b26c, type: 2}
     - target: {fileID: 38418586833770666, guid: 515e88e6002b9784fb90a5deaf4a151b, type: 3}
       propertyPath: m_Name
       value: Tower
@@ -1736,6 +1775,10 @@ PrefabInstance:
     - target: {fileID: 38418586833770667, guid: 515e88e6002b9784fb90a5deaf4a151b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 38418586833770668, guid: 515e88e6002b9784fb90a5deaf4a151b, type: 3}
+      propertyPath: _lead
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 38418587209318496, guid: 515e88e6002b9784fb90a5deaf4a151b, type: 3}
       propertyPath: m_Sprite
@@ -1798,6 +1841,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCamp
       objectReference: {fileID: 0}
+    - target: {fileID: 3131556445667670573, guid: 2d4f8425095aa37429c9bb8334ec92e4, type: 3}
+      propertyPath: _lifeCount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d4f8425095aa37429c9bb8334ec92e4, type: 3}
 --- !u!1001 &6256429710242396602
@@ -1854,18 +1901,6 @@ PrefabInstance:
     - target: {fileID: 6256429709694249859, guid: 88e566ccde62be9499413a7709ad0e98, type: 3}
       propertyPath: m_Name
       value: SingleLevelTestObject
-      objectReference: {fileID: 0}
-    - target: {fileID: 6256429709694249862, guid: 88e566ccde62be9499413a7709ad0e98, type: 3}
-      propertyPath: _updateData.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6256429709694249862, guid: 88e566ccde62be9499413a7709ad0e98, type: 3}
-      propertyPath: _updateData.Array.data[1].props
-      value: 
-      objectReference: {fileID: 11400000, guid: bd0e9a9520a409f41b8eb32c0292b734, type: 2}
-    - target: {fileID: 6256429709694249862, guid: 88e566ccde62be9499413a7709ad0e98, type: 3}
-      propertyPath: _updateData.Array.data[1].updateLevel
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88e566ccde62be9499413a7709ad0e98, type: 3}

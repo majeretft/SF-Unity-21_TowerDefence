@@ -1759,6 +1759,7 @@ GameObject:
   - component: {fileID: 2033703909}
   - component: {fileID: 2033703908}
   - component: {fileID: 2033703907}
+  - component: {fileID: 6322337073362363579}
   m_Layer: 5
   m_Name: NextWaveButton
   m_TagString: Untagged
@@ -1881,6 +1882,19 @@ MonoBehaviour:
           m_StringArgument: next wave button
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6322337073362363579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033703905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba2e0f8d01fc0c4090165ba178d8ed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sound: 12
 --- !u!1 &384229276961556792
 GameObject:
   m_ObjectHideFlags: 0
@@ -3441,12 +3455,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _doDonDestroyOnLoad: 0
-  _kills: {fileID: 0}
-  _score: {fileID: 0}
-  _time: {fileID: 0}
-  _timeRecord: {fileID: 0}
-  _result: {fileID: 0}
-  _buttonNextText: {fileID: 0}
   _panelSuccess: {fileID: 6164876480087874618}
   _panelFailure: {fileID: 6164876479065366790}
 --- !u!1 &6164876479065366790
@@ -3459,6 +3467,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6164876479065366791}
   - component: {fileID: 6164876479065366784}
+  - component: {fileID: 1025238139965423482}
   m_Layer: 5
   m_Name: Failure
   m_TagString: Untagged
@@ -3496,6 +3505,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6164876479065366790}
   m_CullTransparentMesh: 1
+--- !u!114 &1025238139965423482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6164876479065366790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a029efc1bc3a784a948fc07e69172ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sound: 6
 --- !u!1 &6164876479159031081
 GameObject:
   m_ObjectHideFlags: 0
@@ -4156,6 +4178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6164876480087874756}
   - component: {fileID: 6164876480087874619}
+  - component: {fileID: 2923125048875311303}
   m_Layer: 5
   m_Name: Success
   m_TagString: Untagged
@@ -4193,6 +4216,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6164876480087874618}
   m_CullTransparentMesh: 1
+--- !u!114 &2923125048875311303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6164876480087874618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a029efc1bc3a784a948fc07e69172ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sound: 7
 --- !u!1 &6164876480188379990
 GameObject:
   m_ObjectHideFlags: 0
