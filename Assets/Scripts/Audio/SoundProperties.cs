@@ -1,6 +1,5 @@
 using UnityEngine;
 using System;
-using System.Linq;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -33,6 +32,7 @@ namespace TowerDefence
 
                 for (int i = 0; i < target._sounds.Length; i++)
                 {
+                    Undo.RecordObject(target, "Sound Scriptable object");
                     target._sounds[i] = EditorGUILayout.ObjectField($"{(Sound)i}:", target._sounds[i], typeof(AudioClip), false) as AudioClip;
                 }
             }

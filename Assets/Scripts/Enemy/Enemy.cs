@@ -74,10 +74,12 @@ namespace TowerDefence
             sr.color = props.color;
             sr.transform.localScale = new Vector3(props.spriteScale.x, props.spriteScale.y, 1);
 
+#if UNITY_EDITOR
             var anim = view.GetComponent<Animator>();
             anim.runtimeAnimatorController = props.animation;
             if (TryGetFirstSpriteFromAnimation(props.animation, out var s))
                 sr.sprite = s;
+#endif
 
             GetComponent<Spaceship>().UseProps(props);
             GetComponentInChildren<CircleCollider2D>().radius = props.radius;
@@ -99,6 +101,7 @@ namespace TowerDefence
             TDPlayer.Instance.AddEnemyGold(_gold);
         }
 
+#if UNITY_EDITOR
         private bool TryGetFirstSpriteFromAnimation(RuntimeAnimatorController ac, out Sprite sprite)
         {
             sprite = null;
@@ -113,6 +116,7 @@ namespace TowerDefence
 
             return true;
         }
+#endif
 
         private void OnDestroy()
         {
