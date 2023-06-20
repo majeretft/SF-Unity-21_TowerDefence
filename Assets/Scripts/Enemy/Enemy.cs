@@ -74,9 +74,10 @@ namespace TowerDefence
             sr.color = props.color;
             sr.transform.localScale = new Vector3(props.spriteScale.x, props.spriteScale.y, 1);
 
-#if UNITY_EDITOR
             var anim = view.GetComponent<Animator>();
             anim.runtimeAnimatorController = props.animation;
+
+#if UNITY_EDITOR
             if (TryGetFirstSpriteFromAnimation(props.animation, out var s))
                 sr.sprite = s;
 #endif
