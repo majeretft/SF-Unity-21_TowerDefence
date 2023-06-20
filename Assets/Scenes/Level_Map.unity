@@ -525,6 +525,7 @@ MonoBehaviour:
   _doDonDestroyOnLoad: 1
   _sounds: {fileID: 11400000, guid: 4a24960e049a1354593355bdd173388f, type: 2}
   _bgMusic: {fileID: 8300000, guid: fab113c3d7446ee419e1da9a6971b2db, type: 3}
+  _bgLevelMusic: {fileID: 8300000, guid: dcc44950603feb44ea1444e612661eb7, type: 3}
   _volume: 0.1
 --- !u!82 &176941626
 AudioSource:
@@ -1586,6 +1587,7 @@ GameObject:
   - component: {fileID: 843763756}
   - component: {fileID: 843763755}
   - component: {fileID: 843763759}
+  - component: {fileID: 843763760}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1690,6 +1692,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _menuPanel: {fileID: 581187456}
   _updatePanel: {fileID: 572946128}
+--- !u!114 &843763760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843763754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fe0b3e44f47da541a5e232309835d4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &917777964 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5438346909245651358, guid: 86a675acb98655f43a1c4e6c787bb705, type: 3}

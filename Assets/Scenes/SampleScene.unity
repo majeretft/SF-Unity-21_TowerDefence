@@ -1137,6 +1137,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
+--- !u!1 &1180982730 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6164876478373435943, guid: f06d31616550bfb4fae48caa7b27ef88, type: 3}
+  m_PrefabInstance: {fileID: 1180982729}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1180982731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180982730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 620b1acefdf98c24db373e17a5a556ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1228223884
 GameObject:
   m_ObjectHideFlags: 0
@@ -1680,7 +1697,7 @@ PrefabInstance:
     - target: {fileID: 38418586009293820, guid: 515e88e6002b9784fb90a5deaf4a151b, type: 3}
       propertyPath: _properties
       value: 
-      objectReference: {fileID: 11400000, guid: 0b152f56289f46a4693e3bb8ae1b0ff4, type: 2}
+      objectReference: {fileID: 11400000, guid: 7c9fe99d50a4c1e4e8e1bd8cc7c6036e, type: 2}
     - target: {fileID: 38418586009293820, guid: 515e88e6002b9784fb90a5deaf4a151b, type: 3}
       propertyPath: _damageUpdate
       value: 
@@ -1863,6 +1880,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SingleLevelTestObject
       objectReference: {fileID: 0}
+    - target: {fileID: 6256429710242396604, guid: 88e566ccde62be9499413a7709ad0e98, type: 3}
+      propertyPath: _bgMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: fab113c3d7446ee419e1da9a6971b2db, type: 3}
+    - target: {fileID: 6256429710242396604, guid: 88e566ccde62be9499413a7709ad0e98, type: 3}
+      propertyPath: _bgLevelMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: dcc44950603feb44ea1444e612661eb7, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88e566ccde62be9499413a7709ad0e98, type: 3}
 --- !u!1001 &8119407496908147352
