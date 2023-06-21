@@ -60,5 +60,17 @@ namespace TowerDefence
 
             Instance._isMenuBgPlaying = false;
         }
+
+        public void StopMusic()
+        {
+            if (Instance._isLevelBgPlaying || Instance._isMenuBgPlaying)
+            {
+                Instance._audioSource.clip = null;
+                Instance._audioSource.Stop();
+            }
+
+            Instance._isLevelBgPlaying = false;
+            Instance._isMenuBgPlaying = false;
+        }
     }
 }

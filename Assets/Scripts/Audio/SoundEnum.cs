@@ -24,5 +24,10 @@ namespace TowerDefence
         {
             SoundPlayer.Instance.Play(sound);
         }
+
+        public static void StopMusic(this Sound sound)
+        {
+            SoundPlayer.Instance.StopMusic();
+        }
     }
 }
