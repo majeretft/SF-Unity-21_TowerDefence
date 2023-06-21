@@ -9,7 +9,7 @@ namespace SpaceShooter
         private string _episodeName;
         public string EpisodeName => _episodeName;
 
-        [SerializeField]
+        [SerializeField, TextArea(5, 20)]
         private string _episodeText;
         public string EpisodeText => _episodeText;
 

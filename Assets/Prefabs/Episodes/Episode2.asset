@@ -12,8 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb2887e7f95de644b6addd70834870f, type: 3}
   m_Name: Episode2
   m_EditorClassIdentifier: 
-  _episodeName: Episode 2
-  _episodeText: 
+  _episodeName: Battle on reavers couple
+  _episodeText: 'Our kindom underestimated the foe!
+
+    We lost our chance to stop
+    the enemy army on the dead planes, but now we have a strategic opportunity to
+    defeat them on the reavers bank!
+
+    We have to defend the bridges!'
   _levels:
-  - SampleScene
-  _previewImage: {fileID: 0}
+  - Level_2
+  _previewImage: {fileID: 21300000, guid: dd79034c752be5d4ba73f4b323207d0f, type: 3}

@@ -12,8 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb2887e7f95de644b6addd70834870f, type: 3}
   m_Name: Episode4
   m_EditorClassIdentifier: 
-  _episodeName: Episode 4
-  _episodeText: 
+  _episodeName: Battle for city Yolos
+  _episodeText: 'Our brave warriors!
+
+    We had no enoght defence power to stop
+    our enemies before they reched the glorious city Yolos! We build as much defence
+    as possible while our armies fought for our fellow settlements Quvira and Newdomn!
+
+    Today
+    we stand as one! For the flory, for the king!'
   _levels:
-  - SampleScene
-  _previewImage: {fileID: 0}
+  - Level_4
+  - Level_EndGame
+  _previewImage: {fileID: 21300000, guid: e78045e18c2ed0e41b6bbd780a0d48c5, type: 3}

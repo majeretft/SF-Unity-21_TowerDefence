@@ -12,8 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb2887e7f95de644b6addd70834870f, type: 3}
   m_Name: Episode3
   m_EditorClassIdentifier: 
-  _episodeName: Episode 3
-  _episodeText: 
+  _episodeName: Battle on reaver Elvya
+  _episodeText: 'Our fellow warriors!
+
+    Our army failed to defend the river couple
+    area because of lack of supply, but here we stand near our fellow settlements
+    Quvira and Newdomn all as one to defend our citizenz and win this civil was with
+    the dark forces of brother dark!
+
+    Unite we stand!'
   _levels:
-  - SampleScene
-  _previewImage: {fileID: 0}
+  - Level_3
+  _previewImage: {fileID: 21300000, guid: 6bf7b178d6e667a4faeaecd257e84bec, type: 3}
