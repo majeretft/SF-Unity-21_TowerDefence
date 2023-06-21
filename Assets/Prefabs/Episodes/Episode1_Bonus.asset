@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb2887e7f95de644b6addd70834870f, type: 3}
   m_Name: Episode1_Bonus
   m_EditorClassIdentifier: 
-  _episodeName: Episode 1 Bonus
-  _episodeText: 
+  _episodeName: Battle in forest Gean
+  _episodeText: "Your brave warriors!\nToday we have lost battle for the Dead planes,
+    but we have additional opportunity to show our strength in the forest of Gean
+    \nWe will delay our enemy there, and give our partners time to prepare for defence!"
   _levels:
-  - SampleScene
-  _previewImage: {fileID: 0}
+  - Level_1_bonus
+  _previewImage: {fileID: 21300000, guid: d4eead58db5eeb9408867705f5e2703e, type: 3}

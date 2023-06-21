@@ -12,8 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb2887e7f95de644b6addd70834870f, type: 3}
   m_Name: Episode3_Bonus
   m_EditorClassIdentifier: 
-  _episodeName: Episode 3 Bonus
-  _episodeText: 
+  _episodeName: Battle for settlement Newdomn
+  _episodeText: 'Our fellow warriors!
+
+    The enemy is smart and ruthless, they
+    are destrying our villages and cities. Now hteir forces come ti our fellow sattlement
+    Newdomn at the east planes. We need to send help and save settlers for the dark
+    forces.
+
+    Unite we stand, for Newdomn settlers!'
   _levels:
-  - SampleScene
-  _previewImage: {fileID: 0}
+  - Level_3_bonus
+  _previewImage: {fileID: 21300000, guid: da98ed17468ce794eb19f45f050f7557, type: 3}
