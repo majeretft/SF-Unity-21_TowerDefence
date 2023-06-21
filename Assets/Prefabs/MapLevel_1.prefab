@@ -327,6 +327,7 @@ GameObject:
   - component: {fileID: 4152203766917764736}
   - component: {fileID: 4115905768271000033}
   - component: {fileID: 1155070821}
+  - component: {fileID: 1687700103023317610}
   m_Layer: 5
   m_Name: LevelClickArea
   m_TagString: Untagged
@@ -448,6 +449,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1687700103023317610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3508641579493154382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba2e0f8d01fc0c4090165ba178d8ed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sound: 12
 --- !u!1 &4793404855871820830
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,6 +589,8 @@ MonoBehaviour:
   - {fileID: 8322867099438144761}
   - {fileID: 3936186486551839366}
   - {fileID: 9039791548361328862}
+  _episode: {fileID: 0}
+  _introUi: {fileID: 0}
 --- !u!1 &6561282815987962766
 GameObject:
   m_ObjectHideFlags: 0

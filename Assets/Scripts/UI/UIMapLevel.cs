@@ -15,12 +15,15 @@ namespace TowerDefence
         [SerializeField]
         private Episode _episode;
 
+        [SerializeField]
+        private EpisodeIntrolUI _introUi;
+
         private int _score;
         public int Score => _score;
 
         public void LoadLevel()
         {
-            LevelSequenceController.Instance.StartEpisode(_episode);
+            _introUi.Show(_episode);
         }
 
         public void Initialize()

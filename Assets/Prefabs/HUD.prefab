@@ -318,6 +318,7 @@ GameObject:
   - component: {fileID: 269789835}
   - component: {fileID: 269789834}
   - component: {fileID: 269789833}
+  - component: {fileID: 7800519484905622432}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -439,6 +440,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7800519484905622432}
+        m_TargetAssemblyTypeName: TowerDefence.SoundHook, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7800519484905622432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269789831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba2e0f8d01fc0c4090165ba178d8ed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sound: 12
 --- !u!1 &325439274
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,6 +1575,7 @@ GameObject:
   - component: {fileID: 1311047313}
   - component: {fileID: 1311047312}
   - component: {fileID: 1311047311}
+  - component: {fileID: 8994996706181828248}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1670,6 +1697,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8994996706181828248}
+        m_TargetAssemblyTypeName: TowerDefence.SoundHook, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8994996706181828248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311047309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba2e0f8d01fc0c4090165ba178d8ed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sound: 12
 --- !u!1 &1519256235
 GameObject:
   m_ObjectHideFlags: 0
@@ -2337,6 +2389,7 @@ GameObject:
   - component: {fileID: 6741384959878972434}
   - component: {fileID: 9171889549957833105}
   - component: {fileID: 6653931495639597884}
+  - component: {fileID: 2708468163617923822}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -2459,6 +2512,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2708468163617923822}
+        m_TargetAssemblyTypeName: TowerDefence.SoundHook, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2708468163617923822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4549769841633348865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba2e0f8d01fc0c4090165ba178d8ed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sound: 12
 --- !u!1 &4780803980251603984
 GameObject:
   m_ObjectHideFlags: 0
@@ -2973,6 +3051,7 @@ GameObject:
   - component: {fileID: 6164876478373435937}
   - component: {fileID: 6164876478373435936}
   - component: {fileID: 7018746049901389990}
+  - component: {fileID: 4114052867692504277}
   m_Layer: 5
   m_Name: HUD
   m_TagString: Untagged
@@ -3070,6 +3149,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
 --- !u!114 &7018746049901389990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6164876478373435943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 620b1acefdf98c24db373e17a5a556ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4114052867692504277
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3306,6 +3397,7 @@ GameObject:
   - component: {fileID: 6164876478609972455}
   - component: {fileID: 6164876478609972454}
   - component: {fileID: 6164876478609972453}
+  - component: {fileID: 642011602409704115}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -3428,6 +3520,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 642011602409704115}
+        m_TargetAssemblyTypeName: TowerDefence.SoundHook, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &642011602409704115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6164876478609972443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba2e0f8d01fc0c4090165ba178d8ed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sound: 12
 --- !u!1 &6164876478817856994
 GameObject:
   m_ObjectHideFlags: 0
@@ -3982,6 +4099,7 @@ GameObject:
   - component: {fileID: 6164876479747220422}
   - component: {fileID: 6164876479747220421}
   - component: {fileID: 6164876479747220420}
+  - component: {fileID: 6111576153134585507}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -4104,6 +4222,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6111576153134585507}
+        m_TargetAssemblyTypeName: TowerDefence.SoundHook, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6111576153134585507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6164876479747220282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba2e0f8d01fc0c4090165ba178d8ed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sound: 12
 --- !u!1 &6164876479963280503
 GameObject:
   m_ObjectHideFlags: 0
@@ -4780,6 +4923,7 @@ GameObject:
   - component: {fileID: 8423630325845913936}
   - component: {fileID: 1582437136782038889}
   - component: {fileID: 6348110548336358602}
+  - component: {fileID: 2825274674683599699}
   m_Layer: 5
   m_Name: ContinueButton
   m_TagString: Untagged
@@ -4902,6 +5046,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2825274674683599699}
+        m_TargetAssemblyTypeName: TowerDefence.SoundHook, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2825274674683599699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7291469115673780691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba2e0f8d01fc0c4090165ba178d8ed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sound: 12
 --- !u!1 &8552444527982397694
 GameObject:
   m_ObjectHideFlags: 0
